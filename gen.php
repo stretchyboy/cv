@@ -13,7 +13,7 @@
     
     $xslDoc = new DOMDocument();
     
-    $sXSL = file_get_contents('xsl/'.$sStyleSheetName.'.xsl');
+    $sXSL = file_get_contents('stylesheet/'.$sStyleSheetName.'.xsl');
     if(!($sXSL))
     {
       echo "sXSL not set";

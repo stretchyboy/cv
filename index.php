@@ -9,47 +9,48 @@
     $sJob = file_get_contents('job.txt');
   }
 
-  $sXMLName = $_REQUEST['xmlname'];
+
+  if($_REQUEST['xmlname']) 
+  {
+   $sXMLName = $_REQUEST['xmlname'];
+  }
+  else
+  {
+    $sXMLName = 'CurrentCV';
+  }
+
   $xmlDoc = new DOMDocument();
   $bResult = $xmlDoc->load('xml/'.$sXMLName.'.xml');
   if(!($bResult))
   {
-    echo "sXML not set";
     header('HTTP/1.1 404 Not Found', true, 404);
+    echo "sXML not set";
     exit;
   }
   
   $oXPath = new DOMXPath($xmlDoc);
   $tbody = $xmlDoc->getElementsByTagName('cv')->item(0);
 
-// our query is relative to the tbody node
-$query = 'count(//category)';
-
-$entries = $oXPath->evaluate($query, $tbody);
-
-
-//echo "\n<br><pre>\nentries  =" .var_export($entries , TRUE)."</pre>";
+  // our query is relative to the tbody node
+  $query = 'count(//category)';
   
-  
+  $entries = $oXPath->evaluate($query, $tbody);
   $entries = $oXPath->evaluate('//category', $xmlDoc);
-  //echo "\n<br><pre>\nentries  =" .var_export($entries , TRUE)."</pre>";
-
+  
   $aCategories = array();
   foreach ($entries as $domElement){
-  $sCategory =  $domElement->firstChild->nodeValue;
-  $aCategories[$sCategory] = $sCategory;
+    $sCategory =  $domElement->firstChild->nodeValue;
+    $aCategories[$sCategory] = $sCategory;
+  }
+    
+  asort($aCategories);
+  //echo "\n<br><pre>\naCategories =" .var_export(array_keys($aCategories), TRUE)."</pre>";
   
-  
-}
-asort($aCategories);
-//echo "\n<br><pre>\naCategories =" .var_export(array_keys($aCategories), TRUE)."</pre>";
-
-preg_match_all('/'.join('|', $aCategories).'/i', $sJob, $aMatches);
-//echo "\n<br><pre>\naMatches =" .var_export($aMatches, TRUE)."</pre>";
-//$sThesaurusKey = 'e4aeec2b38f65bf0c0ab184bb0a3fe14';
+  preg_match_all('/'.join('|', $aCategories).'/i', $sJob, $aMatches);
+  //echo "\n<br><pre>\naMatches =" .var_export($aMatches, TRUE)."</pre>";
+  //$sThesaurusKey = 'e4aeec2b38f65bf0c0ab184bb0a3fe14';
 
   $oAltWords = new alternativeWords();
-  
   
   $aMatches = array();
   foreach($aCategories as $sCategory)
@@ -68,10 +69,9 @@ preg_match_all('/'.join('|', $aCategories).'/i', $sJob, $aMatches);
 
   //echo "\n<br><pre>\naMatches =" .var_export(array_values($aMatches), TRUE)."</pre>";
 
-echo '<iframe width="100%" height="400px"  src="http://localhost/projects/cv/gen.php?style=html_CV_Grey&xmlname=cv&from=1998&catergories='.urlencode(join(',',$aMatches)).'"></iframe>';
-
-echo '<iframe width="100%" height="40px"  src="http://localhost/projects/cv/gen.php?style=pdf_CV_Grey&xmlname=cv&from=1998&catergories='.urlencode(join(',',$aMatches)).'"></iframe>';
-
+  echo '<h2>CV</h2><iframe width="100%" height="400px" src="gen.php?style=html_cv&xmlname='.urlencode($sXMLName).'&from=1998&catergories='.urlencode(join(',',$aMatches)).'"></iframe>';
+  //echo '<h2>CV</h2><iframe width="100%" height="400px" src="gen.php?style=html_CV_Grey&xmlname='+urlencode($sXMLName)+'&from=1998&catergories='.urlencode(join(',',$aMatches)).'"></iframe>';
+  
 
 class alternativeWords
 {
@@ -82,9 +82,9 @@ class alternativeWords
     $aAltWords = array();
     include($this->sAltWordsFile);
     
-    //$sWords = file_get_contents($this->sAltWordsFile);
+    $sWords = file_get_contents($this->sAltWordsFile);
     
-    //$this->aAltWords = unserialize($sWords);
+    $this->aAltWords = unserialize($sWords);
     $this->aAltWords = $aAltWords;
   }
   
@@ -108,7 +108,7 @@ class alternativeWords
   
   function fetchNewWords($sWord)
   {
-    $sThes = file_get_contents('http://words.bighugelabs.com/api/2/e4aeec2b38f65bf0c0ab184bb0a3fe14/'.$sWord.'/php');
+    $sThes = file_get_contents('http://words.bighugelabs.com/api/2/1c14925fc13e4b05b0af1072ce7b53c0/'.$sWord.'/php');
     echo "\n<br><pre>\nsThes  =" .$sThes ."</pre>";
     $aThes = unserialize($sThes);
     echo "\n<br><pre>\naThes  =" .var_export($aThes , TRUE)."</pre>";

@@ -127,7 +127,7 @@
   ),
   'achieve' => 
   array (
-   0 => 'achieve',
+    0 => 'achieve',
   ),
   'database' => 
   array (
@@ -135,7 +135,6 @@
     1 => 'information',
     2 => 'database',
   ),
-  
   'program' => 
   array (
     0 => 'programme',
@@ -158,5 +157,85 @@
   'customer service' => 
   array (
     0 => 'customer service',
+  ),
+  'advising' => 
+  array (
+    0 => 'advising',
+  ),
+  'design skills' => 
+  array (
+    0 => 'design skills',
+  ),
+  'education' => 
+  array (
+    0 => 'instruction',
+    1 => 'teaching',
+    2 => 'pedagogy',
+    3 => 'didactics',
+    4 => 'educational activity',
+    5 => 'training',
+    6 => 'breeding',
+    7 => 'Department of Education',
+    8 => 'Education Department',
+    9 => 'Education',
+    10 => 'acquisition',
+    11 => 'activity',
+    12 => 'cognitive content',
+    13 => 'content',
+    14 => 'executive department',
+    15 => 'learning',
+    16 => 'mental object',
+    17 => 'profession',
+    18 => 'upbringing',
+    19 => 'education',
+  ),
+  'emerging tech' => 
+  array (
+    0 => 'emerging tech',
+  ),
+  'mozilla' => 
+  array (
+    0 => 'mozilla',
+  ),
+  'programming' => 
+  array (
+    0 => 'scheduling',
+    1 => 'programing',
+    2 => 'computer programming',
+    3 => 'computer programing',
+    4 => 'creating by mental acts',
+    5 => 'planning',
+    6 => 'programming',
+  ),
+  'teaching' => 
+  array (
+    0 => 'instruction',
+    1 => 'pedagogy',
+    2 => 'precept',
+    3 => 'commandment',
+    4 => 'education',
+    5 => 'didactics',
+    6 => 'educational activity',
+    7 => 'activity',
+    8 => 'doctrine',
+    9 => 'ism',
+    10 => 'philosophical system',
+    11 => 'philosophy',
+    12 => 'school of thought',
+    13 => 'teaching',
+  ),
+  'training' => 
+  array (
+    0 => 'preparation',
+    1 => 'grooming',
+    2 => 'education',
+    3 => 'breeding',
+    4 => 'activity',
+    5 => 'upbringing',
+    6 => 'training',
+  ),
+  'webdev' => 
+  array (
+    0 => 'webdev',
   ),
 );

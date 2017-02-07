@@ -1,92 +1,16 @@
+We are looking for talented individuals to join our Software Development team. The Junior PHP Developer will help support and grow our existing systems, tools and products and to drive forward new ideas and innovation that will allow ASK4 to remain at the head of the pack.
 
-    Access Space Network Ltd
-                                                                                     Unit 1, AVEC Building
-                                                                                          3-7 Sidney Street
-                                                                                        Sheffield, S1 4RG
-                                                                                         Tel: 0114 2495522
-                                                                                        Fax: 0114 2495533
-                                               Job Description
- Job Title:     COMMUNITY LEARNING PROGRAMME TECHNICIAN
- Ref:           ASN/KV/2008/CLPT
- Line Manager: The Access Space CEO/Technical Director
- Hours:                        3 days per week, hours to be arranged. Tuesday to Saturday as necessary,
-                               to fulfil the responsibilities of the job. Some evening work may also be
-                               necessary.
- Base:                         Access Space, Sheffield.
- Salary:                       £16,000 per annum pro rata
- Period:                       Fixed term until August 2009
- Responsible to:               The Access Space CEO/Technical Director
- Summary of Duties: Overall responsibility for the technical aspects of the Access Space
-                               Community Learning Programme from Access Space to outreach venues.
-                               To be specifically responsible for investigating ways recycled and therefore
-                               donated computers can be made available to Community Learning
-                               Programme participants for home use.
-                               This post requires knowledge of Linux, LAN and recycled technology.
- Holiday Entitlement:12 days plus public holidays.
- Period of Notice:             1 month for both employer and employee.
- Probationary Period: 3 months
- Apply to: Access Space Network Ltd, Avec Building, 3 - 7 Sidney Street, Sheffield, S1 4RG
- (0114) 2495522
- kate@access-space.org
- Please apply in writing, including your CV and a cover letter describing your reasons for applying,
- indicating your experience and skills with reference to the person specification. Please include the
- names and contact details of 2 referees indicating their relationship to you.
- Deadline for Applications: 1st December 2008
-Access Space Network Ltd
-UK Charity #1103837, UK Co. #4560531
-Trustees: Bill Best, Lisa Wallbank, Frank Wilkes, Mark Knight,
-Scott Hawkins, Jim Methley, Ben Kyneswood. Secretary: Kate Vale.
-Patrons: Richard Allan, Ivan Pope
-                                                  Job Description
-    Main Duties
- ● Develop and maintain the Access Space mobile LAN.
- ● Assess record and where appropriate, repair newly acquired IT equipment
- ● Visit potential event venues and assess their suitability, regarding
-    the installation of a mobile LAN
- ● Install and prepare the mobile LAN. Maintain an up to date record of
-    the structure and configuration of the system, and all aspects of the
-    IT provision.
- ● To help (in conjunction with other team members) devise workshops that are accessible by
-    those with no prior knowledge.
- ● Investigate and implement an effective strategy for individual participants to receive refurbished
-    PC’s,complete with open source software productivity suite.
- ● Communicate effectively with other team members, volunteers and trainees.
- ● Write and maintain plain English "how to" documents.
- ● Ensure that employees, volunteers, trainees and attendees adhere to
- ● Access Space's health and Safety procedures.
- ● Help to implement and promote Access Space's Equal Opportunities Policy.
-Access Space Network Ltd
-UK Charity #1103837, UK Co. #4560531
-Trustees: Bill Best, Lisa Wallbank, Frank Wilkes, Mark Knight,
-Scott Hawkins, Jim Methley, Ben Kyneswood. Secretary: Kate Vale.
-Patrons: Richard Allan, Ivan Pope
-                                             Person Specification
-Experience
- Essential
- ● Developing and Maintaining Local Area Networks
- ● Installing and configuring PC’s – Using Linux
- ● Building PC’s from component parts
- Desirable
- ● Working within a community setting
- ● Experience refurbishing second user IT equipment
- ● Running/facilitating workshops, learning environments
- Knowledge
- Essential
- ● Knowledge of Open Source software its’ ethos, and practical application
- ● Knowledge of a wide range of Open Source Software applications
- Desirable
- ● Knowledge of Open Source Software within a not – for – profit environment
- Skills
- Essential
- ● Excellent Communication Skills
- ● A wide range of writing styles from reports through to simple how to documents
- ● The ability to self manage and prioritise own workload
- ● Excellent time management
- ● The ability to communicate technical knowledge to those with no prior experience or detailed
-    knowledge
- ● Web page creation using HTML
-Access Space Network Ltd
-UK Charity #1103837, UK Co. #4560531
-Trustees: Bill Best, Lisa Wallbank, Frank Wilkes, Mark Knight,
-Scott Hawkins, Jim Methley, Ben Kyneswood. Secretary: Kate Vale.
-Patrons: Richard Allan, Ivan Pope
+Role Description:
+
+Junior software developer, with some UI experience, to work on ASK4 systems, services and products.
+
+Skills & Experience:
+
+    Around 2 years experience in a similar role
+    Basic PHP
+    Good graphic design
+    Javascript
+    HTML/CSS
+    Proven documentation skills
+
+This role offers the potential to progress within the team, moving on to designing more complex projects.
