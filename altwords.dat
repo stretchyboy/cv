@@ -1,0 +1,162 @@
+<?php
+ $aAltWords = array (
+  'communication' => 
+  array (
+    0 => 'communicating',
+    1 => 'communicate',
+    2 => 'communication',
+  ),
+  'community' => 
+  array (
+    0 => 'community of interests',
+    1 => 'residential district',
+    2 => 'residential area',
+    3 => 'group',
+    4 => 'grouping',
+    5 => 'organisation',
+  ),
+  'customer' => 
+  array (
+    0 => 'client',
+    1 => 'consumer',
+    2 => 'customer',
+  ),
+  'databases' => 
+  array (
+    0 => 'info',
+    1 => 'information',
+    2 => 'databases',
+  ),
+  'description' => 
+  array (
+    7 => 'description',
+  ),
+  'design' => 
+  array (
+    0 => 'plan',
+    1 => 'project',
+    2 => 'specify',
+    3 => 'design',
+  ),
+  'documentation' => 
+  array (
+    0 => 'software documentation',
+    1 => 'support',
+    2 => 'documentation',
+  ),
+  'html' => 
+  array (
+    0 => 'hypertext markup language',
+    1 => 'hypertext mark-up language',
+    2 => 'HTML',
+    3 => 'html',
+  ),
+  'hardware' => 
+  array (
+    0 => 'computer hardware',
+    1 => 'component',
+    2 => 'hardware',
+  ),
+  'high profile' => 
+  array (
+    0 => 'high profile',
+  ),
+  'javascript' => 
+  array (
+    0 => 'javascript',
+  ),
+  'linux' => 
+  array (
+    0 => 'Linux',
+    1 => 'UNIX',
+    2 => 'UNIX operating system',
+    3 => 'UNIX system',
+    4 => 'linux',
+  ),
+  'php' => 
+  array (
+    0 => 'php',
+  ),
+  'software' => 
+  array (
+    0 => 'software program',
+    1 => 'computer software',
+    2 => 'software system',
+    3 => 'software package',
+    4 => 'package',
+    5 => 'code',
+    6 => 'computer code',
+    7 => 'software',
+  ),
+  'system admin' => 
+  array (
+    0 => 'system admin',
+  ),
+  'system design' => 
+  array (
+    0 => 'system design',
+  ),
+  'team' => 
+  array (
+    0 => 'group',
+    1 => 'team',
+  ),
+  'xml' => 
+  array (
+    0 => 'xml',
+  ),
+  'train' => 
+  array (
+    0 => 'train',
+  ),
+  'advise' => 
+  array (
+    0 => 'counsel',
+    1 => 'suggest',
+    2 => 'advise',
+  ),
+  'foss' => 
+  array (
+    0 => 'free open source software',
+    1 => 'open source',
+    2 => 'foss',
+  ),
+  'sysadmin' => 
+  array (
+    0 => 'sysadmin',
+  ),
+  'achieve' => 
+  array (
+   0 => 'achieve',
+  ),
+  'database' => 
+  array (
+    0 => 'info',
+    1 => 'information',
+    2 => 'database',
+  ),
+  
+  'program' => 
+  array (
+    0 => 'programme',
+    1 => 'create by mental act',
+    2 => 'create mentally',
+    3 => 'schedule',
+    4 => 'program',
+  ),
+  'service' => 
+  array (
+    0 => 'serve',
+    1 => 'service',
+  ),
+  'leadership' => 
+  array (
+    0 => 'leading',
+    1 => 'leaders',
+    2 => 'leadership',
+  ),
+  'customer service' => 
+  array (
+    0 => 'customer service',
+  ),
+);

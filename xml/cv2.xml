@@ -1,0 +1,284 @@
+<?xml-stylesheet type="text/xsl" href="cv.xsl"?>
+<cv>
+  <candidate>
+    <name>Martyn Eggleton</name>
+    <address>
+      <line>40 Portsea Road</line>
+      <line>Hillsborough</line>
+      <city>Sheffield</city>
+      <postcode>S6 4QB</postcode>
+    </address>
+    <tel>0114 2214395</tel>
+    <mobile>0779 4445457</mobile>
+    <email>martyn.eggleton@gmail.com</email>
+    <dateofbirth>27th July 1976</dateofbirth>
+    <nationality>British</nationality>
+    <maritalstatus>Married</maritalstatus>
+  </candidate>
+  <profile>
+  
+  <item><category>System Design</category><description>Flexible, adaptable and self developing with an aptitude for picking up ICT systems and techniques (For example I am currently learning JAVA and XUL for two personal projects).</description></item>
+  <item><category>System Design</category><description>Good training and development skills ranging from identifying learners needs to preparing sessions and giving feedback and assessment.</description></item>
+  <item><category>System Design</category><description>A keen free and open source software advocate who contributes to and leads various small FOSS projects.</description></item>
+  <item><category>System Design</category><description>A skilled programmer with over 5 years experience in web technologies especially PHP, HTML and JavaScript.</description></item>
+  <item><category>System Design</category><description>Dedicated to bringing the most efficient and usable user experience to new and existing systems, by bring forward innovative ideas and developing them into complete systems.</description></item>
+   <item><category>PHP</category><description>A hardworking individual with experience of working in small teams as well as written, verbal and visual communication.</description></item>
+ <!--<item>An aptitude for software development, systems design and training and coaching.</description></item>-->
+ 
+  <!--<item>A hardworking individual with good interpersonal, written, verbal and visual communications skills and an aptitude for software development, employment advice, training and coaching.</description></item>  -->
+  
+    <item><category>PHP</category><description>Good awareness of design, planning &amp; problem solving
+    techniques and approaches in a variety of situations from developing functional specifications
+    for technical solutions with users, to process development, training, team and capacity building.</description></item>
+  <!--<item>Good desktop publishing and web development skills both aesthetically and technically.</description></item>-->
+    <item><category>PHP</category><description>Flexible, adaptable and self developing with an aptitude for picking up ICT systems and techniques (I am currently learning JAVA for 3D games development and XUL for an Internet aware song lyric and presentation projection suite).</description></item>
+  <item><description>Good training and development skills ranging from identifying learners needs to preparing sessions and giving feedback and assessment.</description></item>
+  <item><description>Experience of high profile and high financial turnover environments, writing for systems with an annual turnover in excess of  14 million pounds and being the mostly responsible for the 'Flora London Marathon Exhibition' website.</description></item>
+  <!--achievements feedback from Joelle-->
+  </profile>
+  
+  
+  
+  <experience type="Voluntary">
+    <organisation>Access-Space</organisation>
+    <date year="2008" month="07" />
+    <title>Training / Technical Volunteer</title>
+    <item><category>Linux</category><description>Teaching workshops with Access-Space users new to Linux and FOSS on how to choose install and configure a GNU/Linux distribution, using course notes I wrote in preparation (http://knowhow.access-space.org/wiki/doku.php?id=courses:ilit).</description></item>
+    <item><category>Hardware</category><description>Teaching some users the parts of a PC and how to select build and test PCs from component parts, also constructing PCs to train on.</description></item>
+    <!--item><category>Community</category><description>Working within a community setting</description></item>
+    item><category>Hardware</category><description>Experience refurbishing second user IT equipment</description></item>
+    item><category>Training</category><description>Running/facilitating workshops, learning environments</description></item>-->
+    <item><category>Software</category><description>Sharing knowledge of Open Source Software utilities and tools (and the ethos behind them) for development with other users including creativity programs, editors and programming libraries.</description></item>
+    <!--<item categories="">Excellent Communication Skills</description></item>-->
+    <!--item><category>Documentation</category><description>A wide range of writing styles from reports through to simple how to documents</description></item>
+    <item categories="">The ability to self manage and prioritise own workload</description></item>
+    <item categories="">Excellent time management</description></item>-->
+
+    <item><category>WebDev</category><description>Assisting in the creation of various Access-Space Web pages including modifying HTML templates for dokuwiki.</description></item>
+  </experience>
+  
+  
+  <experience type="Paid">
+    <organisation>CMJ Management Ltd.</organisation>
+
+    <date year="2003" month="05" />
+    <date year="2008" month="06" />
+
+    <title>Software Developer</title>
+    <item><category>System Design</category><description>Software Developer on TAMS (Total Agency Management System) which provides back office and public websites for booking accommodation and conference facilities and equipment and exhibition space.</description></item>
+	<item><category>System Design</category><description>Worked closely with internal and external customers identifying, proposing and implementing new features to improve user experience.</description></item>
+    <item><category>Databases</category><description>Relational Database design and maintenance using PostgreSQL on a system comprising of well over 100 tables.</description></item>
+    <item><category>PHP</category><description>Developed major 'Hotel Booking Agency Management System' written in heavily object oriented PHP. Using an in house frame work that I helped to develop, this includes extensions to SMARTY.</description></item>
+    <item><category>PHP</category><description>Wrote and was responsible for design and maintenance of and user support for a user definable report writing module, which can output as HTML, CSV and PDF.</description></item>
+    <item><category>JavaScript</category><description>Wrote a cross browser rich Internet application for designing lettering for t-shirts and running vests for the Flora London Marathon, in object oriented JavaScript using JSON as the communication medium.</description></item>
+	<item><category>JavaScript</category><description>Wrote Web 2.0 style JavaScript rendered user interface elements for quick searches and situations where there are many small incremental updates to be made.</description></item>
+    <item><category>PHP</category><description>Built SVG plotter driver in PHP for HPGL2 based cutter plotters, used for taking T-Shirt lettering requests and cutting them out of vinyl.</description></item>
+    <item><category>XML</category><description>Wrote graphical exhibition floor-plan designer in SVG and JavaScript.</description></item>
+    <item><category>PHP</category><description>Wrote a WYSIWYG user content system that, allowed Exhibitors at the Flora London Marathon to add there own content and logos to the lmexpo website safely.</description></item>
+    <item><category>XML</category><description>Wrote XML / REST interfaces for connection to partner organisations systems, for single sign-in etc. And integration with Google Checkout and WorldPay</description></item>
+	<item><category>PHP</category><description>Designed and coded to unit tests for suitable areas of systems, ensuring further robustness.</description></item>
+	
+    
+	<!--<item><category>Design Skills</category><description></description></item>-->
+<!--	  -->
+	<!-- robust secure accessible standards compliant -->
+  </experience>
+  
+
+  <experience type="Paid">
+    <organisation>jobnet @ burtonstreetproject</organisation>
+    
+    <date year="2002" month="09" />
+    <date year="2003" month="04" />
+
+    <title>Advice Worker / IT Coordinator</title>
+    <item><category>Advising</category><description>Advised and assisted people on job search issues and help them to develop and find work.</description></item>
+    <item><category>System Design</category><description>Advised on the development of the externally developed Skills Register' system to fix it functionality and usability issues.</description></item>
+    <item><category>PHP</category><description>Developed tools to assist colleagues in other jobnets (15 offices around Sheffield) and JobCentrePlus offices to classify jobs in to the Standard Occupational Classification Codes, the first version being in CHM the second MS Access 2000 and the final one written in PHP.</description></item>
+    <item><category>PHP</category><description>Developed distributed systems to allow our advise workers to write CVs for clients, track the kind of work they are looking for and do semi automated job search on a number of websites, from any location. Again initially in ACCESS (as front end to PostgreSQL) but then in PHP.</description></item>
+  </experience>
+
+  <experience type="Paid">
+    <organisation>Jobcentre Plus</organisation>
+  
+    <date year="2000" month="06" />
+    <date year="2002" month="09" />
+
+    <title>Administration Officer</title>
+    
+    <item><category>Description</category><description>Assistant Disability Employment Adviser.</description></item>
+    <item><category>Advising</category><description>Assisted disabled jobseekers to find work by advising on employment and benefit issues.</description></item>
+    <item><category>Description</category><description>Occupational Psychology Assessment Test Administrator.</description></item>
+    <item><category>Advising</category><description>Administered Occupational Psychology Assessment exercises.</description></item>
+    <item><category>Advising</category><description>>Access to Work Administration Assistant / Assistant Access to Work Consultant.</description></item>
+    <item><category>System Design</category><description>Assisted the team to administer the programme. Due to Employment Services IT policy I had to develop a complex management information and reporting system in EXCEL, to replace the DiSC system. I was also asked to develop the Functional Specification for permanent the replacement DiSC2.</description></item>
+  </experience>
+  <experience type="Paid">
+    <organisation>Sheffield Wildlife Trust</organisation>
+
+    <date year="1998" month="11" />
+    <date year="2001" month="03" />
+
+    <title>Information and Publicity Manager</title>
+    <item><category>Databases</category><description>Managing all the internal information systems, developing 6 database systems, some of which loaded live data into our website using PERL, and others that were used for financial tracking, and reserve management.</description></item>
+    <item><category>Design Skills</category><description>Responsible for producing SWT's publications including the membership magazine Kingfisher and brochures.</description></item>
+    <item><category>System Admin</category><description>Administered 10 PC network, installing software, training and coaching staff, advising SWT and others on purchasing, and trouble shooting.</description></item>
+  </experience>
+  
+  <experience type="Paid">
+    <organisation>Crossfield Chemicals</organisation>
+
+    <date year="1993" month="07" />
+    <date year="1993" month="09" />
+
+    <title>Thixotropic paint systems researcher</title>
+  </experience>
+  <experience type="School Work Experience">
+    <organisation>Garog</organisation>
+
+    <date year="1993" month="03" />
+    <date year="1993" month="03" />
+
+    <title>Digital systems design assistant</title>
+  </experience>
+  <experience type="School Work Experience">
+    <organisation>Heronscan Software Ltd</organisation>
+
+    <date year="1992" month="02" />
+    <date year="1992" month="02" />
+
+    <title>Digital control systems design assistant</title>
+  </experience>
+  
+  <experience type="Voluntary">
+    <organisation>Neighbourhood Information Network Enterprise</organisation>
+
+    <date year="1998" month="02" />
+    <date year="1998" month="09" />
+
+    <title>Technical Manager</title>
+    <item><description>Co-founder and developer for project aiming to use information technology to help socially excluded communities help themselves, through information, knowledge and resource sharing.</description></item>
+    <item><description>This involved putting together a draft Neighbourhood Atlas, a 250 page website.</description></item>
+  </experience>
+
+  <experience type="Voluntary">
+    <organisation>Netherthorpe and Upperthorpe Community Alliance</organisation>
+
+    <date year="1997" month="10" />
+    <date year="1998" month="09" />
+
+    <title>Management Committee Member</title>
+    <item><description>Officer and Executive member for organisation that brings together over 70 community groups in the area to give local people a say in how regeneration funding is spent.</description></item>
+    <item><description>Also a member of the committee responsible for the use of European funding, and involved in writing the Area Action Plan and the organisation of the community conference and consultation on which it was based.</description></item>
+  </experience>
+  <!--
+  <experience type="Voluntary">
+    <organisation>The Word Place</organisation>
+
+    <date year="1997" month="04" />
+    <date year="1997" month="12" />
+
+    <title>IT Tutor to ESOL students</title>
+  </experience>
+  <experience type="Voluntary">
+    <organisation>Gimme5</organisation>
+
+    <date year="1996" month="05" />
+    <date year="1996" month="12" />
+
+    <title>Project team member</title>
+  </experience>
+
+  <experience type="Voluntary">
+    <organisation>Students For Sheffield</organisation>
+
+    <date year="1996" month="01" />
+    <date year="1996" month="09" />
+
+    <item><description>Heavily involved in this partnership between students, community and business leaders in Sheffield to improve the effectiveness of students in the community.</description></item>
+    <item><description>I completed the first Leadership in the Community' course in 96, and helped stage courses in 97 and 8. Led the Audio and Visual team that staged 3 highly successful conferences for 1200 people.</description></item>
+  </experience>
+  <experience type="Voluntary">
+    <organisation>Sheffield Electronic Press</organisation>
+
+    <date year="1995" month="09" />
+    <date year="1996" month="05" />
+
+    <title>Project Leader</title>
+    <item><description>First Editor &amp; technical manager for the highly successful Internet magazine, ShEP.</description></item>
+    <item><description>Responsible for introducing it's continuing organisational structure and initial launch, and setting up and managing many of its technical elements.</description></item>
+    <item><description>Organised and motivated volunteer reporters, programmers and editorial staff.</description></item>
+  </experience>
+-->
+  <educationitem>
+    <organisation>AMT International</organisation>
+
+    <date year="1999" month="08" />
+    <date year="1999" month="08" />
+
+    <qualification type="City &amp; Guilds" title="7331 in Training Techniques" />
+  </educationitem>
+  <educationitem>
+    <organisation>University of Sheffield</organisation>
+
+    <date year="1994" month="04" />
+    <date year="1996" month="06" />
+
+    <qualification type="BEng" title="Control &amp; Systems Engineering" grade="200 CAT Points"/>
+  </educationitem>
+  <educationitem>
+    <organisation>Padgate High 6th Form Centre</organisation>
+
+    <date year="1992" month="09" />
+    <date year="1994" month="06" />
+
+    <qualification type="A Level" title="Maths" grade="A" />
+    <qualification type="A Level" title="Physics" grade="B" />
+    <qualification type="A Level" title="Economics" grade="C" />
+    <qualification type="A Level" title="General Studies" grade="A" />
+  </educationitem>
+  <!--
+  <educationitem>
+
+    <organisation>Padgate County High School</organisation>
+
+    <date year="1987" month="09" />
+    <date year="1992" month="06" />
+
+    <qualification type="GCSE" title="Maths" grade="A" />
+    <qualification type="GCSE" title="Dual Award Science" grade="AA" />
+    <qualification type="GCSE" title="English Lit &amp; Lang" grade="BB" />
+    <qualification type="GCSE" title="Music" grade="F" />
+    <qualification type="GCSE" title="British Industrial Society" grade="B" />
+    <qualification type="GCSE" title="German" grade="C" />
+  </educationitem>
+-->
+  <referee name="Shirley Hammond" title="Disability Service Manager">
+
+    <organisation>South Yorkshire Disability Service Team</organisation>
+    <address>
+      <line>3rd Floor Rockingham Court</line>
+      <line>152 Rockingham Street</line>
+      <line>Sheffield</line>
+      <line>S1 4EB</line>
+    </address>
+  </referee>
+  <referee name="Dr. Rob Stoneman" title="Director">
+    <organisation>Sheffield Wildlife Trust</organisation>
+    <address>
+      <line>Wood Lane House</line>
+      <line>52 Wood Lane</line>
+      <line>Hillsborough</line>
+      <line>Sheffield</line>
+      <line>S6 5HE</line>
+    </address>
+  </referee>
+  <referee name="Ms B Broome" title="Director">
+    <organisation>Sheffield Churches Council for Community Care</organisation>
+    <address>
+      <line>Backfields</line>
+      <line>Sheffield</line>
+      <line>S1 4HJ</line>
+    </address>
+  </referee>
+</cv> 

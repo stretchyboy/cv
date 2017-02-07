@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+   <fo:layout-master-set>
+      <fo:simple-page-master master-name="A4-portrait" page-height="29.7cm" page-width="21.0cm" margin="2cm">
+         <fo:region-body/>
+      </fo:simple-page-master>
+   </fo:layout-master-set>
+   <fo:page-sequence master-reference="A4-portrait">
+      <fo:flow flow-name="xsl-region-body" font="10pt Times New Roman" text-align="justify">
+         <fo:block font="14pt Times New Roman" text-align="center">Martyn Eggleton</fo:block>
+         <fo:block>40 Portsea Road Hillsborough Sheffield S6 4QB </fo:block>
+         <fo:block>0114 2214395</fo:block>
+         <fo:block>0794 4445457</fo:block>
+         <fo:block>martyn.eggleton@gmail.com</fo:block>
+         <fo:block>A skilled programmer with over 5 years experience in web technologies especially PHP, HTML and JavaScript. Dedicated to bringing the most efficient and usable user experience to new and existing systems, by bring forward innovative ideas and developing them into complete systems. A hardworking individual with experience of working in small teams as well as written, verbal and visual communication. Good awareness of design, planning &amp; problem solving techniques and approaches to a variety of situations range from team and capacity building, to writing press releases, building complex database systems and IT solutions. Flexible, adaptable and self developing with an aptitude for picking up ICT systems and techniques (I am currently learning JAVA for 3D games development and XUL for an Internet aware song lyric and presentation projection suite). Good training and development skills ranging from identifying learners needs to preparing sessions and giving feedback and assessment. Experience of high profile and high financial turnover environments, writing for systems with an annual turnover in excess of £14 million and being the mostly responsible for the 'Flora London Marathon Exhibition' website. </fo:block>
+         <fo:block font="10pt Times New Roman bold" text-align="left">PHP</fo:block>
+         <fo:list-block provisional-distance-between-starts="18pt" provisional-label-separation="3pt">
+            <fo:list-item>
+               <fo:list-item-label end-indent="label-end()">
+                  <fo:block>•</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body start-indent="body-start()">
+                  <fo:block>Developed major 'Hotel Booking Agency Management System' written in heavily object oriented PHP. Using an in house frame work that I helped to develop, this includes extensions to SMARTY.</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+            <fo:list-item>
+               <fo:list-item-label end-indent="label-end()">
+                  <fo:block>•</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body start-indent="body-start()">
+                  <fo:block>Wrote and was responsible for design and maintenance of and user support for a user definable report writing module, which can output as HTML, CSV and PDF.</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+            <fo:list-item>
+               <fo:list-item-label end-indent="label-end()">
+                  <fo:block>•</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body start-indent="body-start()">
+                  <fo:block>Built SVG plotter driver in PHP for HPGL2 based cutter plotters, used for taking T-Shirt lettering requests and cutting them out of vinyl.</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+            <fo:list-item>
+               <fo:list-item-label end-indent="label-end()">
+                  <fo:block>•</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body start-indent="body-start()">
+                  <fo:block>Wrote a WYSIWYG user content system that, allowed Exhibitors at the Flora London Marathon to add there own content and logos to the lmexpo website safely.</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+            <fo:list-item>
+               <fo:list-item-label end-indent="label-end()">
+                  <fo:block>•</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body start-indent="body-start()">
+                  <fo:block>Designed and coded to unit test's for suitable areas of systems, ensuring further robustness.</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+            <fo:list-item>
+               <fo:list-item-label end-indent="label-end()">
+                  <fo:block>•</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body start-indent="body-start()">
+                  <fo:block>Developed tools to assist colleagues in other jobnets (15 offices around Sheffield) and JobCentrePlus offices to classify jobs in to the Standard Occupational Classification Codes, the first version being in CHM the second MS Access 2000 and the final one written in PHP.</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+            <fo:list-item>
+               <fo:list-item-label end-indent="label-end()">
+                  <fo:block>•</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body start-indent="body-start()">
+                  <fo:block>Developed distributed systems to allow our advise workers to write CVs for clients, track the kind of work they are looking for and do semi automated job search on a number of websites, from any location. Again initially in ACCESS (as front end to PostgreSQL) but then in PHP.</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+         </fo:list-block>
+         <fo:block font="10pt Times New Roman bold" text-align="left">JavaScript</fo:block>
+         <fo:list-block provisional-distance-between-starts="18pt" provisional-label-separation="3pt">
+            <fo:list-item>
+               <fo:list-item-label end-indent="label-end()">
+                  <fo:block>•</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body start-indent="body-start()">
+                  <fo:block>Wrote a cross browser rich Internet application for designing lettering for t-shirts and running vests for the Flora London Marathon, in object oriented JavaScript using JSON as the communication medium.</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+            <fo:list-item>
+               <fo:list-item-label end-indent="label-end()">
+                  <fo:block>•</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body start-indent="body-start()">
+                  <fo:block>Wrote Web 2.0 style JavaScript rendered user interface elements for quick searches and situations where there are many small incremental updates to be made.</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+         </fo:list-block>
+         <fo:block font="10pt Times New Roman bold" text-align="left">Databases</fo:block>
+         <fo:list-block provisional-distance-between-starts="18pt" provisional-label-separation="3pt">
+            <fo:list-item>
+               <fo:list-item-label end-indent="label-end()">
+                  <fo:block>•</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body start-indent="body-start()">
+                  <fo:block>Relational Database design and maintenance using PostgreSQL on a system comprising of well over 100 tables.</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+            <fo:list-item>
+               <fo:list-item-label end-indent="label-end()">
+                  <fo:block>•</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body start-indent="body-start()">
+                  <fo:block>Managing all the internal information systems, developing 6 database systems, some of which loaded live data into our website using PERL, and others that were used for financial tracking, and reserve management.</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+         </fo:list-block>
+         <fo:block font="10pt Times New Roman bold" text-align="left">XML</fo:block>
+         <fo:list-block provisional-distance-between-starts="18pt" provisional-label-separation="3pt">
+            <fo:list-item>
+               <fo:list-item-label end-indent="label-end()">
+                  <fo:block>•</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body start-indent="body-start()">
+                  <fo:block>Wrote graphical exhibition floor-plan designer in SVG and JavaScript.</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+            <fo:list-item>
+               <fo:list-item-label end-indent="label-end()">
+                  <fo:block>•</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body start-indent="body-start()">
+                  <fo:block>Wrote XML / REST interfaces for connection to partner organisations systems, for single sign-in etc. And integration with Google Checkout and WorldPay</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+         </fo:list-block>
+         <fo:block font="10pt Times New Roman bold" text-align="left">System Design</fo:block>
+         <fo:list-block provisional-distance-between-starts="18pt" provisional-label-separation="3pt">
+            <fo:list-item>
+               <fo:list-item-label end-indent="label-end()">
+                  <fo:block>•</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body start-indent="body-start()">
+                  <fo:block>Worked closely with internal and external customers identifying, proposing and implementing new features to improve user experience.</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+            <fo:list-item>
+               <fo:list-item-label end-indent="label-end()">
+                  <fo:block>•</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body start-indent="body-start()">
+                  <fo:block>Advised on the development of the externally developed Skills Register' system to fix it functionality and usability issues.</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+            <fo:list-item>
+               <fo:list-item-label end-indent="label-end()">
+                  <fo:block>•</fo:block>
+               </fo:list-item-label>
+               <fo:list-item-body start-indent="body-start()">
+                  <fo:block>Assisted the team to administer the programme. Due to Employment Services IT policy I had to develop a complex management information and reporting system in EXCEL, to replace the DiSC system. I was also asked to develop the Functional Specification for permanent the replacement DiSC2.</fo:block>
+               </fo:list-item-body>
+            </fo:list-item>
+         </fo:list-block>
+         <fo:block font="10pt Times New Roman bold" text-align="left">Work Experience</fo:block>
+         <fo:block>May 2003 - June 2008</fo:block>
+         <fo:block>CMJ Management Ltd.</fo:block>
+         <fo:block>Sept 2002 - Apr 2003</fo:block>
+         <fo:block>jobnet @ burtonstreetproject</fo:block>
+         <fo:block>June 2000 - Sept 2002</fo:block>
+         <fo:block>Jobcentre Plus</fo:block>
+         <fo:block>Nov 1998 - Mar 2001</fo:block>
+         <fo:block>Sheffield Wildlife Trust</fo:block>
+         <fo:block>July 1993 - Sept 1993</fo:block>
+         <fo:block>Crossfield Chemicals</fo:block>
+         <fo:block font="10pt Times New Roman bold" text-align="left">Education / Qualifications</fo:block>
+         <fo:block>AMT International</fo:block>
+         <fo:block>Aug 1999 - Aug 1999</fo:block>
+         <fo:block>
+            <fo:list-block provisional-distance-between-starts="18pt" provisional-label-separation="3pt">
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block>•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>
+                        <b>City &amp; Guilds: </b>7331 in Training Techniques.</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+            </fo:list-block>
+         </fo:block>
+         <fo:block>University of Sheffield</fo:block>
+         <fo:block>Apr 1994 - June 1996</fo:block>
+         <fo:block>
+            <fo:list-block provisional-distance-between-starts="18pt" provisional-label-separation="3pt">
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block>•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>
+                        <b>BEng: </b>Control &amp; Systems Engineering (200 CAT Points).</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+            </fo:list-block>
+         </fo:block>
+         <fo:block>Padgate County High School</fo:block>
+         <fo:block>Sept 1987 - June 1994</fo:block>
+         <fo:block>
+            <fo:list-block provisional-distance-between-starts="18pt" provisional-label-separation="3pt">
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block>•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>
+                        <b>A Level: </b>Maths (A),  Physics (B),  Economics (C),  General Studies (A).</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block>•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>
+                        <b>GCSE: </b>Maths (A),  Dual Award Science (AA),  English Lit &amp; Lang (BB),  Music (F),  British Industrial Society (B),  German (C).</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+            </fo:list-block>
+         </fo:block>
+      </fo:flow>
+   </fo:page-sequence>
+</fo:root>
