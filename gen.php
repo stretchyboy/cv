@@ -6,17 +6,20 @@
     
     if(!($sStyleSheetName && $sXMLName))
     {
-      echo "sXSL not set";
+      echo "'xmlname' or 'style' not set";
       header('HTTP/1.1 404 Not Found', true, 404);
       exit;
     }
     
     $xslDoc = new DOMDocument();
-    
-    $sXSL = file_get_contents('stylesheet/'.$sStyleSheetName.'.xsl');
+    $sStyleSheetFN = 'stylesheet/'.$sStyleSheetName.'.xsl';
+    $sXSL = '';
+    if(file_exists($sStyleSheetFN)){
+      $sXSL = file_get_contents($sStyleSheetFN);
+    }
     if(!($sXSL))
     {
-      echo "sXSL not set";
+      echo "XSL not found";
       header('HTTP/1.1 404 Not Found', true, 404);
       exit;
     }
@@ -49,9 +52,10 @@
         
         $foDoc = $proc->transformToDoc($xmlDoc);
         $sTempFile = join('_', $aStyleParts).'.xml';
+        // If fo doesn't exist create it
         $foDoc->save('fo/'.$sTempFile);
         $sOutFile = join('_', $aStyleParts).'.'.$sType;
-        exec('/home/martyn/fop-0.95/fop '.'fo/'.$sTempFile.' '.'output/'.$sOutFile);
+        exec('/usr/bin/fop '.'fo/'.$sTempFile.' '.'output/'.$sOutFile);
         
         // We'll be outputting a PDF
         header('Content-type: application/pdf');
@@ -70,6 +74,12 @@
         break;
     }
     
-    // The PDF source is in original.pdf
-    readfile('output/'.$sOutFile);
+    if(file_exists('output/'.$sOutFile)){
+      // The PDF source is in original.pdf
+      readfile('output/'.$sOutFile);
+    } else {
+      echo ('output/'.$sOutFile)." not found";
+      header('HTTP/1.1 500 Server Error', true, 404);
+      exit;
+    }
     
