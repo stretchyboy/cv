@@ -4,6 +4,8 @@
     $sXMLName = $_REQUEST['xmlname'];
     $sCatergories = $_REQUEST['catergories'];
     
+    $sFormat = $_REQUEST['format'];
+    
     if(!($sStyleSheetName && $sXMLName))
     {
       echo "'xmlname' or 'style' not set";
@@ -24,8 +26,22 @@
       exit;
     }
     
-    $sXSL = str_replace('$catergories', "'$sCatergories'", $sXSL);
+    function CatFormat($sCat)
+    {
+      return "'".$sCat."'";
+    }
+    
+    $aCats = explode(",", $sCatergories);
+    $sCats = "'".implode("|", $aCats)."'";
+    
+    //echo $sCats;
+    
+    $sXSL = str_replace('$catergories', $sCats, $sXSL);
     $sXSL = str_replace('$from', $_REQUEST['from'], $sXSL);
+    
+    //echo $sXSL;
+    //exit;
+    
     $xslDoc->loadXML($sXSL);
     
     $xmlDoc = new DOMDocument();
@@ -67,9 +83,42 @@
         $outDoc = $proc->transformToDoc($xmlDoc);
         $sOutFile = join('_', $aStyleParts).'.'.$sType;
         $outDoc->save('output/'.$sOutFile);
-    
-        // We'll be outputting a PDF
-        header('Content-type: text/html');
+        
+        if($sFormat == 'pdf'){
+          $sHtmlFile = 'output/'.$sOutFile;
+          $sOutFile = $sOutFile.".pdf";
+          require 'pdfcrowd.php';
+
+          try
+          {   
+              // create an API client instance
+              $client = new Pdfcrowd("stretchyboy", "42ffcd1ef142470fbb24e27bb20d4c23");
+              $client->setPageWidth("210mm");
+              $client->setPageHeight("297mm");
+              $client->enableBackgrounds(true);
+              // convert a web page and store the generated PDF into a $pdf variable
+              $sBase = "https://martyns-cv-stretchyboy.c9users.io/";
+              $pdf = $client->convertURI($sBase.$sHtmlFile);
+              //$pdf = $client->convertFile($sHtmlFile);
+
+              // set HTTP response headers
+              header("Content-Type: application/pdf");
+              header("Cache-Control: max-age=0");
+              header("Accept-Ranges: none");
+              //header('Content-Disposition: attachment; filename="'.$sOutFile.'"');
+          
+              // send the generated PDF 
+              echo $pdf;
+          }
+          catch(PdfcrowdException $why)
+          {
+              echo "Pdfcrowd Error: " . $why;
+          }
+          
+        } else {
+          // We'll be outputting a PDF
+          header('Content-type: text/html');
+        }
         // It will be called downloaded.pdf
         break;
     }

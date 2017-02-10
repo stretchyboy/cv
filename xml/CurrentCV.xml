@@ -1,4 +1,4 @@
-﻿<?xml-stylesheet type="text/xsl" href="/home/meggleton/projects/cv/cv.xsl"?>
+<?xml-stylesheet type="text/xsl" href="/home/meggleton/projects/cv/cv.xsl"?>
 <cv xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/meggleton/projects/cv/cv-schema2.xsd">
 	<candidate>
 		<name>Martyn Eggleton</name>
@@ -40,14 +40,6 @@
 			<category>Software Development</category>
 			<category>Programming</category>
 			<description>A skilled programmer with over 13 years experience in web technologies especially  HTML, JavaScript, PHP and Node.js.</description>
-		</item>
-		<item>
-			<category>Mozilla</category>
-			<description>Involved in delivering the children's activities at each  <a href="https://mozillafestival.org/">MozFest</a> since 2012. </description>
-		</item>
-		<item>
-			<category>Mozilla</category>
-			<description>Hoping to be on the next Mozilla Open Leadership Training course. </description>
 		</item>
 		
 		<item>
@@ -132,12 +124,36 @@
 		</item>
 	</experience>
 
+	<experience type="Voluntary">
+		<organisation>Mozilla</organisation>
+		<date year="2012" month="10"></date><!--????-->
+		<title>MozFest - Youth Zone Facilitator</title>
+	
+		<item>
+			<category>Education</category>
+			<description>Involved in delivering the children's activities at each  <a href="https://mozillafestival.org/">MozFest</a> since 2012. </description>
+		</item>
+		<item>
+			<category>Leadership</category>
+			<description>Hoping to be on the next Mozilla Open Leadership Training course. </description>
+		</item>
+	</experience>
+	<experience type="Voluntary">
+		<organisation>Access-Space</organisation>
+		<date year="2015" month="08"></date><!--????-->
+		<title>Trustee</title>
+		<summary></summary>
+		
+	</experience>
+
+
 	<experience type="Paid">
 		<organisation>EduMake</organisation>
 	
 		<date year="2012" month="05"></date>
 	
 		<title>Learning Technologist</title>
+		<summary>Founder member of the Digital Makers Educational Co-operative. Taking on small projects and developing learning materials.</summary>
 		<item>
 			<category>Emerging Technology</category>
 				<category>JavaScript</category>
@@ -185,7 +201,7 @@
 			<category>CSS</category>
 			<category>Javascript</category>
 			<category>PHP</category>
-			<description>Built various WordPress / DokuWiki and Moodle plugins in PHP that generate HTML &amp; CSS for educational purposes.</description>
+			<description>Built various WordPress / DokuWiki and Moodle plugins in PHP, that generate HTML &amp; CSS for educational purposes and council run projects.</description>
 		</item>
 		
 		<item>
@@ -291,7 +307,7 @@
 		<date year="2003" month="04"></date>
 
 		<title>Advice Worker / IT Coordinator</title>
-		<summary>Description</summary>
+		<summary>Advised job seekers and developed software that matched thier skills to local jobs &amp; training.</summary>
 		
 		<item>
 			<category>Advising</category>
@@ -466,7 +482,7 @@
 		<date year="1999" month="08"></date>
 		<date year="1999" month="08"></date>
 
-		<qualification type="City &amp; Guilds" title="7331 in Training Techniques"></qualification>
+		<qualification type="City &amp; Guilds" level="2" title="7331 in Training Techniques"></qualification>
 	</educationitem>
 	<educationitem>
 		<organisation>University of Sheffield</organisation>
@@ -474,7 +490,7 @@
 		<date year="1994" month="04"></date>
 		<date year="1996" month="06"></date>
 
-		<qualification type="BEng" title="Control &amp; Systems Engineering" grade="200 CAT Points"></qualification>
+		<qualification type="BEng" title="Control &amp; Systems Engineering" grade="200 CAT Points" level="4"></qualification>
 	</educationitem>
 	<educationitem>
 		<organisation>Padgate High 6th Form Centre</organisation>
@@ -482,10 +498,10 @@
 		<date year="1992" month="09"></date>
 		<date year="1994" month="06"></date>
 
-		<qualification type="A Level" title="Maths" grade="A"></qualification>
-		<qualification type="A Level" title="Physics" grade="B"></qualification>
-		<qualification type="A Level" title="Economics" grade="C"></qualification>
-		<qualification type="A Level" title="General Studies" grade="A"></qualification>
+		<qualification type="A Level" level="3"  title="Maths" grade="A"></qualification>
+		<qualification type="A Level" level="3"  title="Physics" grade="B"></qualification>
+		<qualification type="A Level" level="3"  title="Economics" grade="C"></qualification>
+		<qualification type="A Level" level="3"  title="General Studies" grade="A"></qualification>
 	</educationitem>
 
 	<educationitem>
@@ -495,12 +511,12 @@
 		<date year="1987" month="09"></date>
 		<date year="1992" month="06"></date>
 
-		<qualification type="GCSE" title="Maths" grade="A"></qualification>
-		<qualification type="GCSE" title="Dual Award Science" grade="AA"></qualification>
-		<qualification type="GCSE" title="English Lit &amp; Lang" grade="BB"></qualification>
-		<qualification type="GCSE" title="Music" grade="F"></qualification>
-		<qualification type="GCSE" title="British Industrial Society" grade="B"></qualification>
-		<qualification type="GCSE" title="German" grade="C"></qualification>
+		<qualification type="GCSE" level="2"  title="Maths" grade="A"></qualification>
+		<qualification type="GCSE" level="2"  title="Dual Award Science" grade="AA"></qualification>
+		<qualification type="GCSE" level="2"  title="English Lit &amp; Lang" grade="BB"></qualification>
+		<qualification type="GCSE" level="2"  title="Music" grade="F"></qualification>
+		<qualification type="GCSE" level="2"  title="British Industrial Society" grade="B"></qualification>
+		<qualification type="GCSE" level="2"  title="German" grade="C"></qualification>
 	</educationitem>
 
 

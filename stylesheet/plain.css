@@ -1,0 +1,40 @@
+body {	font-size: 11pt; font-family: "Times New Roman", serif; text-align:justify; }
+
+table {
+	font-size: 11pt;
+	font-family: "Times New Roman", serif;
+	text-align: justify;
+	border: 0;
+	width: 100%;
+	padding: 5px;
+}
+
+h1 {	font-size: 15pt; font-family: Arial, sans-serif; text-align:center;}
+h2 {
+	font-size: 13pt;
+	font-family: Arial, sans-serif;
+	text-align: left;
+	background-color: lightgray;
+	padding: 5px;
+}
+
+h2,p, .section, .summary{
+    padding: 5px;
+    clear:both;
+}
+
+.infobar{
+	clear:both;
+	text-align:left;
+}
+ul { margin-left:-20px; }
+
+.organisationname {float:left; font-family: Arial, sans-serif; font-weight: bold; width:38%; padding-right:2%; padding-top:5px; text-align:left;}
+.dates {float:left; width:28%; padding-right:2%;  padding-top:5px;}
+.title {float:left; width:30%;  padding-top:5px;}
+.items,.summary {clear:both;}
+.address {text-align:center;}
+.tel {float:left; text-align:left; width:33%;}
+.mobile {float:left; text-align:left; width:33%;}
+.email {float:left; text-align:center; width:34%; margin-bottom:20px;}
+.twitter {float:left; text-align:right; width:33%;}

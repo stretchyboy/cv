@@ -6,19 +6,7 @@
 		<xsl:param name="cat"/>
 		<html>
 			<style type="text/css">
-				body {	font-size: 10pt; font-family: "Times New Roman", serif; text-align:justify; }
-        table {	font-size: 10pt; font-family: "Times New Roman", serif; text-align:justify; width:595px;}
-				h1 {	font-size: 14pt; font-family: Arial, sans-serif; text-align:center;}
-				h2 {	font-size: 12pt; font-family: Arial, sans-serif; text-align:left;}
-				ul { margin-left:-20px; }
-				.organisationname {float:left; font-family: Arial, sans-serif; font-weight: bold; width:38%; padding-right:2%; padding-top:5px; text-align:left;}
-				.dates {float:left; width:28%; padding-right:2%;  padding-top:5px;}
-				.title {float:left; width:30%;  padding-top:5px;}
-				.items {clear:both;}
-				.address {text-align:center;}
-				.tel {float:left; text-align:left; width:33%;}
-				.mobile {float:left; text-align:center; width:34%;}
-				.email {float:left; text-align:right; width:33%; margin-bottom:20px;}	
+					
 			</style>
 			<body>
 				<h1>
