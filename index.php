@@ -1,3 +1,10 @@
+<html>
+  <head>
+    <title>Martyn's CV Generator.</title>
+    
+  </head>
+  <body>
+    <h2>Martyn's CV Generator.</h2>
 <?php
 
   if($_REQUEST['job']) 
@@ -69,7 +76,10 @@
 
   //echo "\n<br><pre>\naMatches =" .var_export(array_values($aMatches), TRUE)."</pre>";
 
-  echo '<h2>CV</h2><iframe width="100%" height="400px" src="gen.php?style=html_cv&xmlname='.urlencode($sXMLName).'&from=1998&catergories='.urlencode(join(',',$aMatches)).'"></iframe>';
+  echo '<iframe width="800px" height="1000px" src="gen.php?style=html_plain&format=html&xmlname='.urlencode($sXMLName).'&from=2002&catergories='.urlencode(join(',',$aMatches)).'"></iframe>';
+  
+  echo '<a target="_blank" href="gen.php?style=html_plain&format=pdf&xmlname='.urlencode($sXMLName).'&from=2002&catergories='.urlencode(join(',',$aMatches)).'"></iframe>';
+  
   //echo '<h2>CV</h2><iframe width="100%" height="400px" src="gen.php?style=html_CV_Grey&xmlname='+urlencode($sXMLName)+'&from=1998&catergories='.urlencode(join(',',$aMatches)).'"></iframe>';
   
 
@@ -127,9 +137,6 @@ class alternativeWords
 }
 
 ?>
-<html>
-<head></head>
-<body>
 
 
 <form method="post">

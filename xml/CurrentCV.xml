@@ -22,6 +22,7 @@
 			<category>Software Development</category>
 			<description>Flexible, adaptable and self developing with an aptitude for picking up ICT systems and techniques.</description>
 		</item>
+		<!--
 		<item>
 			<category>Training</category>
 			<description>Good training and development skills ranging from identifying learners needs to preparing sessions and giving feedback and assessment.</description>
@@ -29,13 +30,13 @@
 			<item>
 			<category>Education</category>
 			<description>Good classroom and workshop teaching skills and exposure to teacher training at <a href="http://shu.sc.uk">SHU</a> (Withdrew due to accidental injury).</description>
-		</item>
-		
+		</item>-->
+		<!--
 		<item>
 			<category>Software Development</category>
 			<category>Community</category>
 			<description>A keen free and open source software developer who contributes to and leads various small FLOSS projects.</description>
-		</item>
+		</item>-->
 		<item>
 			<category>Software Development</category>
 			<category>Programming</category>
@@ -65,19 +66,14 @@
     for technical solutions with users, to process development, training, team and capacity building.</description>
 		</item>
 		<item>
-			<category>Software Development</category>
+			<category>Web Development</category>
 			
-			<description>Good desktop publishing and web development skills both aesthetically and technically, with a strong commitment to clean code.</description>
+			<description>Good web development skills both aesthetically and technically, with a strong commitment to clean code.</description>
 		</item>
 		<!--<item>
 			<description>Flexible, adaptable and self developing with an aptitude for picking up ICT systems and techniques
 			 (I am currently learning JAVA for 3D games development and XUL for an Internet aware song lyric and presentation projection suite).</description>
 		</item>-->
-		<item>
-			<category>Software Development</category>
-			
-			<description>Good training and development skills ranging from identifying learners needs to preparing sessions and giving feedback and assessment.</description>
-		</item>
 		<item>
 			<category>Software Development</category>
 			
@@ -98,7 +94,7 @@
 		</item>
 		<item>
 			<category>Education</category>
-			<description>Teaching GCSE Computing to various groups. Explaining both the theory of computer science and the practicalities of programming.</description>
+			<description>Lead teaching GCSE Computing to various groups, including planning the Schemes of Work, tracking data and student / parent feedback. The course includes both the theory of computer science and the practicalities of programming.</description>
 		</item>
 		<item>
 			<category>Education</category>
@@ -118,10 +114,7 @@
 			<description>Heavily using Raspberry Pi for teaching of theory, physical computing and engineering. 
 			Using and contributing to the PiNet community and building tools like logicexplorer, a physical logic gate / circuit simulator.</description>
 		</item>
-		<item>
-			<category>Teaching</category>
-			<description>Lead teaching of 3 cohorts of GCSE Computing, including planning the Schemes of Work, tracking data and student / parent feedback.</description>
-		</item>
+		
 	</experience>
 
 	<experience type="Voluntary">
@@ -165,8 +158,8 @@
 		</item>
 		<item>
 			<category>JavaScript</category>	<category>Education</category>
-			<description>Built active_learn and active_JavaScript adaptive learning environments, which give differentiated learning paths way for 
-			Computing Maths skills and JavaScript programming skills.</description>
+			<description>Built "active_learn" and "active_javascript" adaptive learning environments, which give differentiated learning paths way for 
+			GCSE Computing maths skills and JavaScript programming skills.</description>
 		</item>
 	</experience>
 
