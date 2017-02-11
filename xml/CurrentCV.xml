@@ -167,7 +167,7 @@
 		<organisation>Access-Space</organisation>
 		<date year="2009" month="01"></date>
 		<date year="2013" month="04"></date>
-		<title>Technical Officer</title>
+		<title>Technical Manager</title>
 		<summary></summary>
 		<item>
 			<category>PHP</category>
@@ -475,7 +475,7 @@
 		<date year="1999" month="08"></date>
 		<date year="1999" month="08"></date>
 
-		<qualification type="City &amp; Guilds" level="2" title="7331 in Training Techniques"></qualification>
+		<qualification type="City &amp; Guilds" level="2.1" title="7331 in Training Techniques"></qualification>
 	</educationitem>
 	<educationitem>
 		<organisation>University of Sheffield</organisation>
@@ -518,10 +518,12 @@
 
 		<organisation>UTC Sheffield</organisation>
 		<address>
-			<line>118 Matilda Street</line>
+			<line>111 Matilda Street</line>
 			<city>Sheffield</city>
 			<postcode>S1 4QF</postcode>
 		</address>
+		<tel>0114 260 3970</tel>
+		<email>vallen@utcsheffield.org.uk</email>
 	</referee>
 	<!--
 	<referee name="Brigidin Crowther" title="Disability Service Manager">
@@ -534,9 +536,8 @@
 			<postcode>S1 4EB</postcode>
 		</address>
 	</referee>
-	-->
 	
-		<referee name="Brian Quinion" title="Disability Service Manager">
+	<referee name="Brian Quinion" title="Disability Service Manager">
 
 		<organisation>South Yorkshire Disability Service Team</organisation>
 		<address>
@@ -545,6 +546,19 @@
 			<city>Sheffield</city>
 			<postcode>S1 4EB</postcode>
 		</address>
+	</referee>
+	-->
+	
+	<referee name="James Wallbank" title="Proprietor">
+
+		<organisation>Makers</organisation>
+		<address>
+			<line>555 Abbeydale Road</line>
+			<city>Sheffield</city>
+			<postcode>S7 1TA</postcode>
+		</address>
+		<tel>0114 2588431</tel>
+		<email>james@makersontheedge.com</email>
 	</referee>
 <!--
 	<referee name="Shirley Hammond" title="Disability Service Manager">

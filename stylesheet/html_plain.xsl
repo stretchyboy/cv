@@ -48,7 +48,7 @@
 				
 				<section>
 					<h2>Work Experience</h2>
-					<xsl:for-each select="cv/experience">
+					<xsl:for-each select="cv/experience/date[@year &gt;= $from]/..">
 						<xsl:sort select="date[1]/@year" data-type="number" order="descending"/>
 						<xsl:sort select="date[1]/@month" data-type="number" order="descending"/>
 						<div class="item">
@@ -93,7 +93,7 @@
 									</div>
 								</xsl:if>
 							</xsl:if>
-							<xsl:if test="date[@year &gt;= $from]">
+							<xsl:if test="date[@year &gt;=$details]">
 								<xsl:if test="item[contains($catergories,@category)]/description">
 									<div class="items">
 										<ul>
@@ -165,15 +165,12 @@
 									<xsl:value-of select="organisation"/>
 								</p>
 							
-								<p class="address">
-									<xsl:for-each select="cv/candidate/address/*">
-										<xsl:value-of select="."/>
-										<xsl:if test="position() &lt; last()">
-											<br />
-										</xsl:if>
+								<p >
+									<xsl:for-each select="address/*">
+										<xsl:value-of select="."/><br />
 									</xsl:for-each>
 									<xsl:value-of select="tel"/><br />
-								    <xsl:value-of select="email"/><br />
+								    <xsl:value-of select="email"/>
 					    		</p>
 							</div>
 						</xsl:for-each>

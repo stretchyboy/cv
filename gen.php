@@ -37,7 +37,21 @@
     //echo $sCats;
     
     $sXSL = str_replace('$catergories', $sCats, $sXSL);
-    $sXSL = str_replace('$from', $_REQUEST['from'], $sXSL);
+    
+    $iYear = date("Y");
+    $iFrom = $_REQUEST['from'];
+    if(!$iFrom){
+      $iFrom = $iYear - 20;
+    }
+    
+    $iDetails = $_REQUEST['details'];
+    if(!$iDetails){
+      $iDetails = $iYear - 15;
+    }
+    
+    //echo "<pre>".$iFrom."   ".$iDetails."</pre>";
+    $sXSL = str_replace('$from', $iFrom, $sXSL);
+    $sXSL = str_replace('$details', $iDetails, $sXSL);
     
     //echo $sXSL;
     //exit;
@@ -96,7 +110,11 @@
               $client->setPageWidth("210mm");
               $client->setPageHeight("297mm");
               $client->enableBackgrounds(true);
-              // convert a web page and store the generated PDF into a $pdf variable
+              $client->setAuthor("Martyn Eggleton");
+              //$client->setInitialPdfExactZoom("100");
+              $client->setNoModify(true);
+              //$client->setFooterHtml('Page %p of %n');
+              
               $sBase = "https://martyns-cv-stretchyboy.c9users.io/";
               $pdf = $client->convertURI($sBase.$sHtmlFile);
               //$pdf = $client->convertFile($sHtmlFile);
@@ -105,9 +123,7 @@
               header("Content-Type: application/pdf");
               header("Cache-Control: max-age=0");
               header("Accept-Ranges: none");
-              //header('Content-Disposition: attachment; filename="'.$sOutFile.'"');
-          
-              // send the generated PDF 
+              
               echo $pdf;
           }
           catch(PdfcrowdException $why)

@@ -17,31 +17,30 @@ h1, h2, h3, h4,h5{
 h1 {
 	font-size: 15pt; 
 	text-align:center; 
-	junk-margin:0px;
 }
 
 h2 {
 	font-size: 13pt;
 	text-align: left;
 	background-color: lightgray;
-	junk-padding: 5px;
+}
+
+h2 {
+	margin-top:0.5em;
 }
 
 h1, h2, .item {
-    padding: 5px;
+    padding: 0.5em;
     clear:both;
 }
 
-/*h2, p, .section, .summary{
-    junk-padding: 5px;
-    clear:both;
-}*/
-/*
-.infobar{
-	clear:both;
-	text-align:left;
+.item {
+	margin-bottom:1em;
+	-webkit-column-break-inside: avoid;
+	page-break-inside: avoid;
+	break-inside: avoid;
 }
-*/
+
 ul {
  list-style-type: square;
  list-style-position: inside;
@@ -52,23 +51,17 @@ ul {
 	font-family: Arial, sans-serif; 
 	font-weight: bold; 
 	width:38%; 
-	junk-padding-right:2%; 
-	junk-padding-top:5px; 
 	text-align:left;
 }
 
 .dates {
 	float:left;
 	width:28%; 
-	junk-padding-right:2%;  
-	junk-padding-top:5px;
-	
 }
 
 .title {
 	float:left; 
 	width:30%;  
-	junk-padding-top:5px;
 }
 
 .items,.summary {
@@ -95,7 +88,6 @@ ul {
 	float:left; 
 	text-align:center; 
 	width:34%; 
-	junk-margin-bottom:20px;
 }
 
 .twitter {
