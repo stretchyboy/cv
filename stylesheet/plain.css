@@ -10,7 +10,7 @@ table {
 	width: 100%;
 }
 
-h1, h2, h3, h4,h5{
+h1, h2, h3, h4, h5{
 	font-family: Arial, sans-serif; 
 }
 
@@ -64,7 +64,7 @@ ul {
 	width:30%;  
 }
 
-.items,.summary {
+.items, .summary {
 	clear:both;
 }
 
@@ -96,7 +96,7 @@ ul {
 	width:33%;
 }
 
-.referee{
+.referee {
 	width:50%;
 	float:left;
 }

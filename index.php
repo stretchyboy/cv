@@ -1,12 +1,27 @@
-<html>
-  <head>
-    <title>Martyn's CV Generator.</title>
-    
-  </head>
-  <body>
-    <h2>Martyn's CV Generator.</h2>
 <?php
 
+  require __DIR__ . '/vendor/autoload.php';
+  require_once __DIR__ . '/vendor/twig/twig/lib/Twig/Autoloader.php';
+  //use twig/Autoloader;
+  
+  Twig_Autoloader::register();
+  
+  $loader = new Twig_Loader_Filesystem('templates');
+  $twig = new Twig_Environment($loader, array(
+  //    'cache' => __DIR__ . '/compilation_cache',
+  ));
+  
+  $iYear = date("Y");
+  $iFrom = $_REQUEST['from'];
+  if(!$iFrom){
+    $iFrom = $iYear - 20;
+  }
+  
+  $iDetails = $_REQUEST['details'];
+  if(!$iDetails){
+    $iDetails = $iYear - 15;
+  }
+  
   if($_REQUEST['job']) 
   {
    $sJob = $_REQUEST['job'];
@@ -26,6 +41,21 @@
     $sXMLName = 'CurrentCV';
   }
 
+  $sLayout = $_REQUEST['layout'];
+  $sStyle = $_REQUEST['style'];
+
+  $bPreview = false;
+  if($_REQUEST['preview']){
+    $bPreview = true;
+  }
+  
+  
+  if($_REQUEST['format'] == "PDF"){
+    require("gen.php");
+    exit;
+  }
+  
+  
   $xmlDoc = new DOMDocument();
   $bResult = $xmlDoc->load('xml/'.$sXMLName.'.xml');
   if(!($bResult))
@@ -51,9 +81,13 @@
   }
     
   asort($aCategories);
+  $aMessages[] = array(
+    'type'  => 'warning', 
+    'caption' => "Categories =" .var_export(array_keys($aCategories), TRUE)
+  );
   //echo "\n<br><pre>\naCategories =" .var_export(array_keys($aCategories), TRUE)."</pre>";
   
-  preg_match_all('/'.join('|', $aCategories).'/i', $sJob, $aMatches);
+  //preg_match_all('/'.join('|', $aCategories).'/i', $sJob, $aMatches);
   //echo "\n<br><pre>\naMatches =" .var_export($aMatches, TRUE)."</pre>";
   //$sThesaurusKey = 'e4aeec2b38f65bf0c0ab184bb0a3fe14';
 
@@ -73,14 +107,48 @@
       }
     }
   }
-
-  //echo "\n<br><pre>\naMatches =" .var_export(array_values($aMatches), TRUE)."</pre>";
-
-  echo '<iframe width="800px" height="1000px" src="gen.php?style=html_plain&format=html&xmlname='.urlencode($sXMLName).'&from=2002&catergories='.urlencode(join(',',$aMatches)).'"></iframe>';
   
-  echo '<a target="_blank" href="gen.php?style=html_plain&format=pdf&xmlname='.urlencode($sXMLName).'&from=2002&catergories='.urlencode(join(',',$aMatches)).'"></iframe>';
+  //echo "\n<br><pre>\n aMatches  =" .var_export($aMatches , TRUE)."</pre>";
+    
+  $aMessages = array(
+    /*array(
+      'type'  => 'warning', 
+      'caption' => "Just testing"
+    )*/
+  );
   
-  //echo '<h2>CV</h2><iframe width="100%" height="400px" src="gen.php?style=html_CV_Grey&xmlname='+urlencode($sXMLName)+'&from=1998&catergories='.urlencode(join(',',$aMatches)).'"></iframe>';
+  $aLayouts = array(
+    array(
+      'name'    => "html_plain", 
+      'caption' => 'Plain'
+    ),
+    array(
+      'name'    => "html_functional", 
+      'caption' => 'Functional'
+    )
+  );
+  
+  $aStyles = array(
+    array(
+      'name'    => "plain", 
+      'caption' => 'Plain'
+    )
+  );
+  
+  $template = $twig->load('index.html');
+  $template->display(array(
+    'aMatches'  => $aMatches,
+    'sJob'      => $sJob,
+    'iFrom'     => $iFrom,
+    'iDetails'  => $iDetails,
+    'aMessages' => $aMessages,
+    'aLayouts'  => $aLayouts,
+    'sLayout'   => $sLayout,
+    'aStyles'   => $aStyles,
+    'sStyle'    => $sStyles,
+    "sXMLName"  => $sXMLName,
+    "bPreview"  => $bPreview
+  ));
   
 
 class alternativeWords
@@ -118,34 +186,24 @@ class alternativeWords
   
   function fetchNewWords($sWord)
   {
-    $sThes = file_get_contents('http://words.bighugelabs.com/api/2/1c14925fc13e4b05b0af1072ce7b53c0/'.$sWord.'/php');
-    echo "\n<br><pre>\nsThes  =" .$sThes ."</pre>";
-    $aThes = unserialize($sThes);
-    echo "\n<br><pre>\naThes  =" .var_export($aThes , TRUE)."</pre>";
-    
-    if (isset($aThes['verb']['syn']))
-    {
-      $this->aAltWords[$sWord] = $aThes['verb']['syn'];
+    $sThes = file_get_contents('http://words.bighugelabs.com/api/2/1c14925fc13e4b05b0af1072ce7b53c0/'.urlencode($sWord).'/php');
+    if($sThes){
+      //echo "\n<br><pre>\nsThes  =" .$sThes ."</pre>";
+      $aThes = unserialize($sThes);
+      //echo "\n<br><pre>\naThes  =" .var_export($aThes , TRUE)."</pre>";
+      
+      if (isset($aThes['verb']['syn']))
+      {
+        $this->aAltWords[$sWord] = $aThes['verb']['syn'];
+      }
+      else
+      {
+          $this->aAltWords[$sWord] = $aThes['noun']['syn'];
+      }
+      $this->aAltWords[$sWord][] = $sWord;
+      $this->save();
     }
-    else
-    {
-        $this->aAltWords[$sWord] = $aThes['noun']['syn'];
-    }
-    $this->aAltWords[$sWord][] = $sWord;
-    $this->save();
   }
 }
 
 ?>
-
-
-<form method="post">
-
-<textarea name='job' cols="80" rows="20"><?php echo $sJob;?></textarea>
-  
-  
-  <input type="submit" value="Go" />
-</form>
-
-</body>
-</html>

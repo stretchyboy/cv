@@ -1,0 +1,6 @@
+{
+    "require": {
+        "twig/twig": "^1.31",
+        "fkooman/oauth2-client": "^4.0"
+    }
+}

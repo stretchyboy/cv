@@ -173,7 +173,7 @@
 			<category>PHP</category>
 			<category>HTML</category>
 			<category>CSS</category>
-			<category>Javascript</category>
+			<category>JavaScript</category>
 			<category>Education</category>
 			<description>Designed and taught workshops on many different techincal subjects from installing software to developing HTML, CSS, JavaScript, PHP and Robotic's.</description>
 		</item>
@@ -192,7 +192,7 @@
 		<item>
 			<category>HTML</category>
 			<category>CSS</category>
-			<category>Javascript</category>
+			<category>JavaScript</category>
 			<category>PHP</category>
 			<description>Built various WordPress / DokuWiki and Moodle plugins in PHP, that generate HTML &amp; CSS for educational purposes and council run projects.</description>
 		</item>
@@ -200,20 +200,20 @@
 		<item>
 			<category>HTML</category>
 			<category>CSS</category>
-			<category>Javascript</category>
+			<category>JavaScript</category>
 			<category>PHP</category>
 			<description>Developed light touch peer learning tracking software for monitoring and reporting of the progress of informal learning networks.</description>
 		</item>
 		<item>
-			<category>Software</category>
+			<category>FLOSS</category>
 			<description>Shared knowledge of Free/Libre Open Source Software, philosophy utilities and tools (and the ethos behind them) for development with other users including creativity programs, 
 			editors and programming libraries.</description>
 		</item>
 		<item>
 			<category>HTML</category>
 			<category>CSS</category>
-			<category>Javascript</category>
-			<description>Assisting in the creation of various Access-Space Web pages including modifying HTML templates for dokuwiki.</description>
+			<category>JavaScript</category>
+			<description>Created various Access-Space Web pages including modifying HTML templates for dokuwiki.</description>
 		</item>
 	</experience>
 

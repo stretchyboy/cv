@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/home/meggleton/projects/cv/cv.xsl"?>
+<?xml-stylesheet type="text/xsl" href="stylesheet/html_plain.xsl"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
   <xs:element name="cv">
     <xs:complexType>
@@ -77,6 +77,7 @@
         <xs:element name="organisation" type="xs:string"></xs:element>
         <xs:element ref="date" maxOccurs="unbounded"></xs:element>
         <xs:element name="title" type="xs:string"></xs:element>
+        <xs:element name="summary" minOccurs="0" type="xs:string"></xs:element>
         <xs:element ref="item" minOccurs="0" maxOccurs="unbounded"></xs:element>
       </xs:sequence>
       <xs:attribute name="type" type="xs:string" use="required"></xs:attribute>

@@ -37,14 +37,34 @@
 					</div>
 				</section>
 				
-				<section>
-					<h2>Profile</h2>
-			        <div class="item">
-						<xsl:for-each select="cv/profile/item[contains($catergories,category)]/description">
-							<xsl:value-of select="."/><xsl:text> </xsl:text>
-				        </xsl:for-each>
-					</div>
-				</section>
+				<xsl:for-each select="params/category">
+					<xsl:variable name="catsec" select="."/>
+					<xsl:if test="(/cv/profile/item/category[.=$catsec]/../description) or (/cv/experience/date[@year &gt;=$details]/../item/category[contains($catergories,.)][1][.=$catsec]/..)">
+					<section>
+						<h2><xsl:value-of select="$catsec"/></h2>
+				        <div class="item">
+				        	<ul>
+								<xsl:for-each select="/cv/profile/item/category[.=$catsec]/../description">
+									<li>
+										<xsl:value-of select="."/>
+									</li>
+						        </xsl:for-each>
+					        
+						        <xsl:for-each select="/cv/experience/date[@year &gt;=$details]/../item/category[contains($catergories,.)][1][.=$catsec]/..">
+									<xsl:sort select="date[1]/@year" data-type="number" order="descending"/>
+									<xsl:sort select="date[1]/@month" data-type="number" order="descending"/>
+									<xsl:for-each select="description">
+										<li>
+											<xsl:value-of select="."/>
+										</li>
+									</xsl:for-each>
+									
+								</xsl:for-each>
+							</ul>
+						</div>
+					</section>
+					</xsl:if>
+				</xsl:for-each>
 				
 				<section>
 					<h2>Work Experience</h2>
@@ -90,19 +110,6 @@
 								<xsl:if test="string-length(summary)">
 									<div class="summary">
 										<xsl:value-of select="summary"/>
-									</div>
-								</xsl:if>
-							</xsl:if>
-							<xsl:if test="date[@year &gt;=$details]">
-								<xsl:if test="item[contains($catergories,@category)]/description">
-									<div class="items">
-										<ul>
-											<xsl:for-each select="item[contains($catergories,@category)]/description">
-												<li>
-													<xsl:value-of select="."/>
-												</li>
-											</xsl:for-each>
-										</ul>
 									</div>
 								</xsl:if>
 							</xsl:if>
