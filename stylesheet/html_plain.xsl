@@ -11,7 +11,7 @@
         <xsl:copy-of select="@*"/>
           <xsl:apply-templates/>
       </xsl:copy>
-  </xsl:template>
+	</xsl:template>
   
 	<xsl:template match="/">
 		<xsl:param name="cat"/>
@@ -61,7 +61,19 @@
 						<div class="item">
 							<div class="infobar">
 								<div class="organisationname">
-									<xsl:value-of select="organisation"/>
+									<xsl:if test="organisation[@href]">
+										<a>
+											<xsl:attribute name="href">
+												<xsl:value-of select="organisation/@href" />
+											</xsl:attribute>
+											<xsl:value-of select="organisation"/>
+										</a>
+									</xsl:if>
+									
+									<xsl:if test="not(organisation[@href])">
+										<xsl:value-of select="organisation"/>
+									</xsl:if>
+									
 								</div>
 								<div class="dates">
 									<xsl:for-each select="date">

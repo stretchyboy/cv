@@ -6,6 +6,13 @@
 		encoding="UTF-8" 
 		indent="yes"/>
 	
+	<xsl:template match="a">
+      <xsl:copy>
+        <xsl:copy-of select="@*"/>
+          <xsl:apply-templates/>
+      </xsl:copy>
+	</xsl:template>
+	
 	<xsl:template match="/">
 		<xsl:param name="cat"/>
 		<xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
@@ -46,7 +53,7 @@
 				        	<ul>
 								<xsl:for-each select="/cv/profile/item/category[.=$catsec]/../description">
 									<li>
-										<xsl:value-of select="."/>
+										<xsl:apply-templates/>
 									</li>
 						        </xsl:for-each>
 					        
@@ -55,7 +62,7 @@
 									<xsl:sort select="date[1]/@month" data-type="number" order="descending"/>
 									<xsl:for-each select="description">
 										<li>
-											<xsl:value-of select="."/>
+											<xsl:apply-templates/>
 										</li>
 									</xsl:for-each>
 									
@@ -74,7 +81,18 @@
 						<div class="item">
 							<div class="infobar">
 								<div class="organisationname">
-									<xsl:value-of select="organisation"/>
+										<xsl:if test="organisation[@href]">
+										<a>
+											<xsl:attribute name="href">
+												<xsl:value-of select="organisation/@href" />
+											</xsl:attribute>
+											<xsl:value-of select="organisation"/>
+										</a>
+									</xsl:if>
+									
+									<xsl:if test="not(organisation[@href])">
+										<xsl:value-of select="organisation"/>
+									</xsl:if>
 								</div>
 								<div class="dates">
 									<xsl:for-each select="date">

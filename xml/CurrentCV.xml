@@ -83,7 +83,7 @@
 	</profile>
 
 	<experience type="Paid">
-		<organisation>Sheffield University Technical College</organisation>
+		<organisation href="http://utcsheffield.org.uk/">Sheffield University Technical College</organisation>
 		<summary></summary>
 		<date year="2013" month="09"></date>
 	
@@ -132,7 +132,7 @@
 		</item>
 	</experience>
 	<experience type="Voluntary">
-		<organisation>Access-Space</organisation>
+		<organisation href="http://access-space.org">Access-Space</organisation>
 		<date year="2015" month="08"></date><!--????-->
 		<title>Trustee</title>
 		<summary></summary>
@@ -141,7 +141,7 @@
 
 
 	<experience type="Paid">
-		<organisation>EduMake</organisation>
+		<organisation href="http://edumake.org/">EduMake</organisation>
 	
 		<date year="2012" month="05"></date>
 	
@@ -164,7 +164,7 @@
 	</experience>
 
 	<experience type="Paid">
-		<organisation>Access-Space</organisation>
+		<organisation href="http://access-space.org">Access-Space</organisation>
 		<date year="2009" month="01"></date>
 		<date year="2013" month="04"></date>
 		<title>Technical Manager</title>
@@ -219,7 +219,7 @@
 
 
 	<experience type="Voluntary">
-		<organisation>Access-Space</organisation>
+		<organisation href="http://access-space.org">Access-Space</organisation>
 		<date year="2008" month="12"></date>
 		<date year="2008" month="07"></date>
 		<title>Training / Technical Volunteer</title>
@@ -344,7 +344,7 @@
 		</item>
 	</experience>
 	<experience type="Paid">
-		<organisation>Sheffield Wildlife Trust</organisation>
+		<organisation href="http://www.wildsheffield.com/">Sheffield Wildlife Trust</organisation>
 
 		<date year="1998" month="11"></date>
 		<date year="2001" month="03"></date>
@@ -408,14 +408,14 @@
 	</experience>
 
 	<experience type="Voluntary">
-		<organisation>Netherthorpe and Upperthorpe Community Alliance</organisation>
+		<organisation href="http://www.zestcommunity.co.uk/">Netherthorpe and Upperthorpe Community Alliance</organisation>
 
 		<date year="1997" month="10"></date>
 		<date year="1998" month="09"></date>
 
 		<title>Management Committee Member</title>
 		<item>
-			<description>Officer and Executive member for organisation that brings together over 70 community groups in the area to give local people a say in how regeneration funding is spent.</description>
+			<description>Founder member, officer and executive member for organisation that brings together over 70 community groups in the area to give local people a say in how regeneration funding is spent.</description>
 		</item>
 		<item>
 			<description>Also a member of the committee responsible for the use of European funding, and involved in writing the Area Action Plan and the organisation of the community conference and consultation on which it was based.</description>
