@@ -6,6 +6,13 @@
 		encoding="UTF-8" 
 		indent="yes"/>
 	
+	<xsl:template match="a">
+      <xsl:copy>
+        <xsl:copy-of select="@*"/>
+          <xsl:apply-templates/>
+      </xsl:copy>
+  </xsl:template>
+  
 	<xsl:template match="/">
 		<xsl:param name="cat"/>
 		<xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
@@ -16,7 +23,7 @@
 				 <link rel="stylesheet" type="text/css" href="../stylesheet/plain.css" />
 				 <title><xsl:value-of select="cv/candidate/name"/> - CV</title>
 			</head>
-			<body>
+			<body spellcheck="true">
 				<section>
 					<h1>
 						<xsl:value-of select="cv/candidate/name"/>
@@ -41,7 +48,7 @@
 					<h2>Profile</h2>
 			        <div class="item">
 						<xsl:for-each select="cv/profile/item[contains($catergories,category)]/description">
-							<xsl:value-of select="."/><xsl:text> </xsl:text>
+							<xsl:apply-templates/>
 				        </xsl:for-each>
 					</div>
 				</section>
@@ -99,7 +106,7 @@
 										<ul>
 											<xsl:for-each select="item[contains($catergories,@category)]/description">
 												<li>
-													<xsl:value-of select="."/>
+													<xsl:apply-templates/>
 												</li>
 											</xsl:for-each>
 										</ul>
