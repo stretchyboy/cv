@@ -49,6 +49,7 @@
 			        <div class="item">
 						<xsl:for-each select="cv/profile/item[contains($catergories,category)]/description">
 							<xsl:apply-templates/>
+							<xsl:text> </xsl:text>
 				        </xsl:for-each>
 					</div>
 				</section>
@@ -62,7 +63,7 @@
 							<div class="infobar">
 								<div class="organisationname">
 									<xsl:if test="organisation[@href]">
-										<a>
+										<a target="_blank">
 											<xsl:attribute name="href">
 												<xsl:value-of select="organisation/@href" />
 											</xsl:attribute>
@@ -108,7 +109,7 @@
 							<xsl:if test="summary">
 								<xsl:if test="string-length(summary)">
 									<div class="summary">
-										<xsl:value-of select="summary"/>
+										<xsl:value-of select="summary"/><xsl:text> </xsl:text>
 									</div>
 								</xsl:if>
 							</xsl:if>

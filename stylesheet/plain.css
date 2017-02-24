@@ -4,6 +4,10 @@ body {
 	text-align:justify; 
 }
 
+a {
+	color: black;
+}
+
 table {
 	text-align: justify;
 	border: 0;
@@ -54,6 +58,11 @@ ul {
 	text-align:left;
 }
 
+.organisationname a {
+	color: black;
+	text-decoration: none;
+}
+
 .dates {
 	float:left;
 	width:28%; 
@@ -99,4 +108,11 @@ ul {
 .referee {
 	width:50%;
 	float:left;
+}
+
+@media print{
+	a {
+		color: black;
+		text-decoration: none;
+	}
 }

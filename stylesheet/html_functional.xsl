@@ -63,6 +63,7 @@
 									<xsl:for-each select="description">
 										<li>
 											<xsl:apply-templates/>
+											<xsl:text> </xsl:text>
 										</li>
 									</xsl:for-each>
 									

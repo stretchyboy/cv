@@ -90,7 +90,8 @@
 		<title>Skills Trainer, Creative Digital Media &amp;  Computing</title>
 		<item>
 			<category>System Design</category>
-			<description>Part of co-design process for a new PlayStation VR, Educational Environmental Narrative game as part of the  <a href="http://revealvr.eu">REVEAL</a> project with SHU.</description>
+			<description>Part of co-design process for a new PlayStation VR, Educational Environmental Narrative game as part of the <!--
+			<a href="http://revealvr.eu">-->REVEAL<!--</a>--> project with <a href="http://www.steelminions.com/">The Steel Minions</a> and <a href="https://www.shu.ac.uk/">SHU</a> and EU partners through <a href="https://ec.europa.eu/programmes/horizon2020/">Horizon2020</a>.</description>
 		</item>
 		<item>
 			<category>Education</category>
