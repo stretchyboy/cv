@@ -17,6 +17,12 @@
     $iFrom = $iYear - 20;
   }
   
+  $iReferences = $_REQUEST['references'];
+    
+  if(!$iReferences){
+    $iReferences = 0;
+  }
+  
   $iDetails = $_REQUEST['details'];
   if(!$iDetails){
     $iDetails = $iYear - 15;
@@ -83,14 +89,64 @@
   asort($aCategories);
   $aMessages[] = array(
     'type'  => 'warning', 
-    'caption' => "Categories =" .var_export(array_keys($aCategories), TRUE)
+    //'caption' => "Categories =" .var_export(array_keys($aCategories), TRUE)
+    'caption' => "Skills in CV : " .join(array_keys($aCategories),", ")
   );
   //echo "\n<br><pre>\naCategories =" .var_export(array_keys($aCategories), TRUE)."</pre>";
   
   //preg_match_all('/'.join('|', $aCategories).'/i', $sJob, $aMatches);
   //echo "\n<br><pre>\naMatches =" .var_export($aMatches, TRUE)."</pre>";
   //$sThesaurusKey = 'e4aeec2b38f65bf0c0ab184bb0a3fe14';
-
+  
+  $ch = curl_init("https://api.algorithmia.com/v1/algo/StanfordNLP/PartofspeechTagger/0.1.0");
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE); 
+  curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+    'Content-type: application/text;charset="utf-8"', 
+    'Authorization: Simple simyGavBCByypprWgpDOxe7OQAB1',
+    //'metadata.content_type: text'
+  ));
+  //curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-type: application/json', 'Authorization: Simple simyGavBCByypprWgpDOxe7OQAB1'));
+  curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query(array(str_replace(array("\n", "\t"), " ", $sJob)))); 
+  if( ! $sReturn = curl_exec($ch))
+  {
+      trigger_error(curl_error($ch));
+  }
+  curl_close($ch); 
+  //echo("<pre>sReturn =".$sReturn."</pre>");
+  
+  $aReturn = json_decode($sReturn, true);
+  //echo("<pre>aReturn =".var_export($aReturn)."</pre>");
+  $sResult = $aReturn['result'];
+  //echo("<pre>sResult =".$sResult."</pre>");
+  $aResult =  explode ( " " , $sResult);
+  
+  //echo("<pre>sValue =\n");
+  //echo("<pre>aResult =".var_export($aResult)."</pre>");
+  $aWords = [];
+  foreach ($aResult as &$sValue) {
+    //echo("<pre>sValue =".$sValue."</pre>");
+    $aLine = explode("_", $sValue);
+    if(strlen($aLine[0]) > 3 ){
+      //echo ($aLine[0]." ".$aLine[1]."\n");
+      if( $aLine[1] == "VBP" || $aLine[1] == "JJ" || $aLine[1] == "NN"){
+        $aWords[] = preg_replace('/[0-9]/','',$aLine[0]); 
+      }
+    }
+  }
+  echo("</pre>");
+  
+  $aWords = array_unique ( $aWords);
+  
+  $aMessages[] = array(
+    'type'  => 'warning', 
+    //'caption' => "Categories =" .var_export(array_keys($aCategories), TRUE)
+    'caption' => "Keywords in Job : " .join($aWords, ", ")
+  );
+  
+  /*
+  curl -X POST -d '<INPUT>' -H 'Content-Type: application/json' -H 'Authorization: Simple simyGavBCByypprWgpDOxe7OQAB1' https://api.algorithmia.com/v1/algo/StanfordNLP/PartofspeechTagger/0.1.0
+  */
+  
   $oAltWords = new alternativeWords();
   
   $aMatches = array();
@@ -108,14 +164,13 @@
     }
   }
   
-  //echo "\n<br><pre>\n aMatches  =" .var_export($aMatches , TRUE)."</pre>";
-    
-  $aMessages = array(
-    /*array(
-      'type'  => 'warning', 
-      'caption' => "Just testing"
-    )*/
+  $aMessages[] = array(
+    'type'  => 'warning', 
+    //'caption' => "From Job =" .var_export(array_keys($aMatches), TRUE)
+    'caption' => "Skills Matched in Job  :" .join(array_keys($aMatches),", ")
   );
+  
+  //echo "\n<br><pre>\n aMatches  =" .var_export($aMatches , TRUE)."</pre>";
   
   $aLayouts = array(
     array(
@@ -147,7 +202,8 @@
     'aStyles'   => $aStyles,
     'sStyle'    => $sStyles,
     "sXMLName"  => $sXMLName,
-    "bPreview"  => $bPreview
+    "bPreview"  => $bPreview,
+    "iReferences"=> $iReferences
   ));
   
 

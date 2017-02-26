@@ -7,6 +7,11 @@
     $sFormat = $_REQUEST['format'];
     $iFrom = $_REQUEST['from'];
     $iDetails = $_REQUEST['details'];
+    $iReferences = $_REQUEST['references'];
+    
+    if(!$iReferences){
+      $iReferences = 0;
+    }
     
     //echo $sCatergories;
     
@@ -39,6 +44,7 @@
     $sXSL = str_replace('$catergories', $sCats, $sXSL);
     $sXSL = str_replace('$from', $iFrom, $sXSL);
     $sXSL = str_replace('$details', $iDetails, $sXSL);
+    $sXSL = str_replace('$references', $iReferences, $sXSL);
     
     $xslDoc->loadXML($sXSL);
     

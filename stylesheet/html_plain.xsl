@@ -96,6 +96,10 @@
 										<xsl:if test="position() &lt; last()">
 											<xsl:text> - </xsl:text>
 										</xsl:if>
+										<xsl:if test="(position() = last()) and (position() = 1)">
+											<xsl:text> - Current</xsl:text>
+										</xsl:if>
+										
 									</xsl:for-each>
 								</div>
 								<div class="title">
@@ -123,6 +127,13 @@
 												</li>
 											</xsl:for-each>
 										</ul>
+									</div>
+								</xsl:if>
+							</xsl:if>
+							<xsl:if test="departure">
+								<xsl:if test="string-length(departure)">
+									<div class="departure">
+										<xsl:value-of select="departure"/><xsl:text> </xsl:text>
 									</div>
 								</xsl:if>
 							</xsl:if>
@@ -172,30 +183,38 @@
 						</div>
 					</xsl:for-each>
 				</section>
-				
-				<section>		
+				<xsl:if test="$references > 0">
+					<section>		
+						<h2>References</h2>
+						<div class="item">
+							<xsl:for-each select="cv/referee">
+								<xsl:sort select="name"/>
+								<div class="referee">
+									<h3><xsl:value-of select="@name"/></h3>
+									<p>
+										<xsl:value-of select="@title"/><br/>
+										<xsl:value-of select="organisation"/>
+									</p>
+								
+									<p >
+										<xsl:for-each select="address/*">
+											<xsl:value-of select="."/><br />
+										</xsl:for-each>
+										<xsl:value-of select="tel"/><br />
+									    <xsl:value-of select="email"/>
+						    		</p>
+								</div>
+							</xsl:for-each>
+						</div>
+					</section>
+				</xsl:if>
+				<xsl:if test="not($references > 0)">
 					<h2>References</h2>
 					<div class="item">
-						<xsl:for-each select="cv/referee">
-							<xsl:sort select="name"/>
-							<div class="referee">
-								<h3><xsl:value-of select="@name"/></h3>
-								<p>
-									<xsl:value-of select="@title"/><br/>
-									<xsl:value-of select="organisation"/>
-								</p>
-							
-								<p >
-									<xsl:for-each select="address/*">
-										<xsl:value-of select="."/><br />
-									</xsl:for-each>
-									<xsl:value-of select="tel"/><br />
-								    <xsl:value-of select="email"/>
-					    		</p>
-							</div>
-						</xsl:for-each>
+						<p>Available on request.</p>
 					</div>
-				</section>
+				</xsl:if>
+				
 			</body>
 		</html>
 	</xsl:template>

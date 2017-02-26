@@ -266,4 +266,13 @@
     1 => 'cleanse',
     2 => 'floss',
   ),
+  'handlebars' => 
+  array (
+    0 => 'bar',
+    1 => 'handlebars',
+  ),
+  'less' => 
+  array (
+    0 => 'less',
+  ),
 );

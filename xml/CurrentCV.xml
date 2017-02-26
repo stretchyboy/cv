@@ -77,7 +77,7 @@
 		<item>
 			<category>Software Development</category>
 			
-			<description>Experience of high profile and high financial turnover environments, writing for systems with an annual turnover in excess of  14 million pounds 
+			<description>Experience of high profile and high financial turnover environments, writing for systems with an annual turnover in excess of 14 million pounds 
 			and being the mostly responsible for the 'Flora London Marathon Exhibition' website.</description>
 		</item>
 	</profile>
@@ -91,7 +91,7 @@
 		<item>
 			<category>System Design</category>
 			<description>Part of co-design process for a new PlayStation VR, Educational Environmental Narrative game as part of the <!--
-			<a href="http://revealvr.eu">-->REVEAL<!--</a>--> project with <a href="http://www.steelminions.com/">The Steel Minions</a> and <a href="https://www.shu.ac.uk/">SHU</a> and EU partners through <a href="https://ec.europa.eu/programmes/horizon2020/">Horizon2020</a>.</description>
+			<a href="http://revealvr.eu">-->REVEAL<!--</a>--> project with <a href="http://www.steelminions.com/">The Steel Minions</a> and <a href="https://www.shu.ac.uk/">Sheffield Hallam University</a> and EU partners through <a href="https://ec.europa.eu/programmes/horizon2020/">Horizon2020</a>.</description>
 		</item>
 		<item>
 			<category>Education</category>
@@ -99,7 +99,7 @@
 		</item>
 		<item>
 			<category>Education</category>
-			<description>Teaching version control, team working technologies (git, issue tracking etc.) and test driven development, mostly in JavaScript.</description>
+			<description>Teaching version control (git), team working technologies (gitlab, github, issue tracking etc.) and test driven development, using JavaScript and other languages.</description>
 		</item>
 		
 		<item>
@@ -154,8 +154,11 @@
 			<description>Building Amazon Alexa Skill and learning materials for students to make their own voice activated software for free.</description>
 		</item>
 		<item>
+			<category>LESS</category>
+			<category>Handlebars</category>
+			<category>HTML</category>
 			<category>JavaScript</category>
-			<description>Designed the software for <a href="http://junctionarts.org/data-draw/">Data-Draw</a>, a machine for capturing survey data in a tactile and engaging way. It then produces engaging generative animated art works, unique to each visitor from the data. The individual recieves a paper version and can see themselves or the whole day of visitors on-line.</description>
+			<description>Designed the software for <a href="http://junctionarts.org/data-draw/">Data-Draw</a>, a machine for capturing survey data in a tactile and engaging way. It then produces engaging generative animated art works, unique to each visitor from the data. The individual recieves a paper version and can see themselves or the whole day of visitors on-line. The system is written in Javascript using HTML, SVG, LESS and Handlebars templating, producing a very adaptable system for use by many organisations.</description>
 		</item>
 		<item>
 			<category>JavaScript</category>	<category>Education</category>
@@ -207,7 +210,7 @@
 		</item>
 		<item>
 			<category>FLOSS</category>
-			<description>Shared knowledge of Free/Libre Open Source Software, philosophy utilities and tools (and the ethos behind them) for development with other users including creativity programs, 
+			<description>Shared knowledge of FLOSS (Free/Libre Open Source Software), philosophy utilities and tools (and the ethos behind them) for development with other users including creativity programs, 
 			editors and programming libraries.</description>
 		</item>
 		<item>
@@ -221,13 +224,13 @@
 
 	<experience type="Voluntary">
 		<organisation href="http://access-space.org">Access-Space</organisation>
-		<date year="2008" month="12"></date>
 		<date year="2008" month="07"></date>
+		<date year="2008" month="12"></date>
 		<title>Training / Technical Volunteer</title>
 		<summary></summary>
 		<item>
 			<category>Linux</category>
-			<description>Taught workshops with Access-Space users introducing Linux and FLOSS and how to install and configure a GNU/Linux distribution.</description>
+			<description>Taught workshops with Access-Space users introducing Linux and FLOSS (Free/Libre Open Source Software) and how to install and configure a GNU/Linux distribution.</description>
 		</item>
 		
 		<item>
@@ -280,17 +283,19 @@
 		</item>
 		<item>
 			<category>PHP</category>
-			<description>Wrote a WYSIWYG user content system that, allowed Exhibitors at the Flora London Marathon to add there own content and logos to the lmexpo website safely.</description>
+			<description>Wrote a user edited content managment system that, allowed Exhibitors at the Flora London Marathon to add there own content and logos to the lmexpo website safely.</description>
 		</item>
 		<item>
 			<category>XML</category>
 			<description>Wrote XML / REST interfaces for connection to partner organisations systems, for single sign-in etc. 
-			And integration with Google Checkout and WorldPay</description>
+			And integration with Google Checkout and WorldPay.</description>
 		</item>
 		<item>
 			<category>PHP</category>
 			<description>Designed and coded to unit tests for suitable areas of systems, ensuring further robustness.</description>
 		</item>
+		<departure>CMJ was wound up after the emigration of our owner.</departure>
+
 	</experience>
 
 
@@ -319,6 +324,8 @@
 			<category>PHP</category>
 			<description>Developed distributed systems to allow our advise workers to write CVs for clients, track the kind of work they are looking for and do semi automated job search on a number of websites, from any location. Again initially in ACCESS (as front end to PostgreSQL) but then in PHP.</description>
 		</item>
+		<departure>I was starting to consider a move into full time software development and was invited to join CMJ by the project lead.</departure>
+
 	</experience>
 
 	<experience type="Paid">
@@ -343,6 +350,8 @@
 			<category>System Design</category>
 			<description>Assisted the team to administer the programme. Due to Employment Services IT policy I had to develop a complex management information and reporting system in EXCEL, to replace the DiSC system. I was also asked to develop the Functional Specification for permanent the replacement DiSC2.</description>
 		</item>
+		<departure>I left JCP to help start JobNet as I still had links with the community organisations involved and had the skills and knowledge.</departure>
+
 	</experience>
 	<experience type="Paid">
 		<organisation href="http://www.wildsheffield.com/">Sheffield Wildlife Trust</organisation>
@@ -365,6 +374,7 @@
 			<category>System Admin</category>
 			<description>Administered a PC network, installed software, coached staff, advised SWT and others on purchasing, and provided all user support.</description>
 		</item>
+		<departure>This was a originally a 1 year contract, but was extended whilst funding allowed.</departure>
 	</experience>
 
 	<experience type="Paid">
@@ -376,7 +386,7 @@
 		<title>Thixotropic paint systems researcher</title>
 	</experience>
 	
-	<experience type="School Work Experience">
+	<experience type="Work Experience">
 		<organisation>Garog</organisation>
 
 		<date year="1993" month="03"></date>
@@ -384,7 +394,7 @@
 
 		<title>Digital systems design assistant</title>
 	</experience>
-	<experience type="School Work Experience">
+	<experience type="Work Experience">
 		<organisation>Heronscan Software Ltd</organisation>
 
 		<date year="1992" month="02"></date>
