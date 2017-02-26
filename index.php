@@ -154,12 +154,13 @@
   {
     $aCategory = $oAltWords->getAltWords($sCategory);
     //echo "\n<br><pre>\naCategory  =" .var_export($aCategory , TRUE)."</pre>";
-    
-    foreach($aCategory as $sCat)
-    {
-      if(stripos($sJob, $sCat) !== false)
+    if($aCategory){
+      foreach($aCategory as $sCat)
       {
-          $aMatches[$sCategory] = $sCategory;
+        if(stripos($sJob, $sCat) !== false)
+        {
+            $aMatches[$sCategory] = $sCategory;
+        }
       }
     }
   }
@@ -242,22 +243,40 @@ class alternativeWords
   
   function fetchNewWords($sWord)
   {
-    $sThes = file_get_contents('http://words.bighugelabs.com/api/2/1c14925fc13e4b05b0af1072ce7b53c0/'.urlencode($sWord).'/php');
-    if($sThes){
-      //echo "\n<br><pre>\nsThes  =" .$sThes ."</pre>";
-      $aThes = unserialize($sThes);
-      //echo "\n<br><pre>\naThes  =" .var_export($aThes , TRUE)."</pre>";
-      
-      if (isset($aThes['verb']['syn']))
-      {
-        $this->aAltWords[$sWord] = $aThes['verb']['syn'];
+    if(substr_count($sWord, " ") == 0){
+      try {
+        $sThes = file_get_contents('http://words.bighugelabs.com/api/2/1c14925fc13e4b05b0af1072ce7b53c0/'.urlencode($sWord).'/php');
+        if($sThes === false){
+          $aMessages[] = array(
+            'type'  => 'warning', 
+            //'caption' => "From Job =" .var_export(array_keys($aMatches), TRUE)
+            'caption' => "Can't find word '".$sWord."'"
+          );
+            
+        } else {
+        
+          //echo "\n<br><pre>\nsThes  =" .$sThes ."</pre>";
+          $aThes = unserialize($sThes);
+          //echo "\n<br><pre>\naThes  =" .var_export($aThes , TRUE)."</pre>";
+          
+          if (isset($aThes['verb']['syn']))
+          {
+            $this->aAltWords[$sWord] = $aThes['verb']['syn'];
+          }
+          else
+          {
+              $this->aAltWords[$sWord] = $aThes['noun']['syn'];
+          }
+          $this->aAltWords[$sWord][] = $sWord;
+          $this->save();
+        }
+      } catch (Exception $e) {
+        $aMessages[] = array(
+            'type'  => 'Error', 
+            //'caption' => "From Job =" .var_export(array_keys($aMatches), TRUE)
+            'caption' => "Can't find word '".$sWord."'"
+          );
       }
-      else
-      {
-          $this->aAltWords[$sWord] = $aThes['noun']['syn'];
-      }
-      $this->aAltWords[$sWord][] = $sWord;
-      $this->save();
     }
   }
 }

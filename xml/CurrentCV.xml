@@ -18,8 +18,9 @@
 	</candidate>
 	<profile>
 		
+		
 		<item>
-			<category>Software Development</category>
+			<category>Software</category><category>Development</category>
 			<description>Flexible, adaptable and self developing with an aptitude for picking up ICT systems and techniques.</description>
 		</item>
 		<!--
@@ -27,24 +28,31 @@
 			<category>Training</category>
 			<description>Good training and development skills ranging from identifying learners needs to preparing sessions and giving feedback and assessment.</description>
 		</item>
-			<item>
+		<item>
 			<category>Education</category>
 			<description>Good classroom and workshop teaching skills and exposure to teacher training at <a href="http://shu.sc.uk">SHU</a> (Withdrew due to accidental injury).</description>
 		</item>-->
-		<!--
+		
 		<item>
-			<category>Software Development</category>
+			<category>Software</category><category>Development</category>
 			<category>Community</category>
 			<description>A keen free and open source software developer who contributes to and leads various small FLOSS projects.</description>
-		</item>-->
+		</item>
+		
 		<item>
-			<category>Software Development</category>
+			<category>Education</category>
+			<category>Learning</category>
+			<description>Good classroom and workshop teaching skills and exposure to teacher training (CertEd) at <a href="http://shu.sc.uk">Sheffield Hallam University</a> unfortunately I could not complete due to accidental injury.</description>
+		</item>
+		
+		<item>
+			<category>Software</category><category>Development</category>
 			<category>Programming</category>
 			<description>A skilled programmer with over 13 years experience in web technologies especially  HTML, JavaScript, PHP and Node.js.</description>
 		</item>
 		
 		<item>
-			<category>Software Development</category>
+			<category>Software</category><category>Development</category>
 			<description>Dedicated to bringing the most efficient and usable user experience to new and existing systems, by bring forward innovative ideas and developing them into complete systems.</description>
 		</item>
 		<item>
@@ -75,7 +83,7 @@
 			 (I am currently learning JAVA for 3D games development and XUL for an Internet aware song lyric and presentation projection suite).</description>
 		</item>-->
 		<item>
-			<category>Software Development</category>
+			<category>Software</category><category>Development</category>
 			
 			<description>Experience of high profile and high financial turnover environments, writing for systems with an annual turnover in excess of 14 million pounds 
 			and being the mostly responsible for the 'Flora London Marathon Exhibition' website.</description>
@@ -89,6 +97,7 @@
 	
 		<title>Skills Trainer, Creative Digital Media &amp;  Computing</title>
 		<item>
+			<category>Virtual Reality</category>
 			<category>System Design</category>
 			<description>Part of co-design process for a new PlayStation VR, Educational Environmental Narrative game as part of the <!--
 			<a href="http://revealvr.eu">-->REVEAL<!--</a>--> project with <a href="http://www.steelminions.com/">The Steel Minions</a> and <a href="https://www.shu.ac.uk/">Sheffield Hallam University</a> and EU partners through <a href="https://ec.europa.eu/programmes/horizon2020/">Horizon2020</a>.</description>
@@ -99,12 +108,29 @@
 		</item>
 		<item>
 			<category>Education</category>
+			<category>Evaluation</category>
+			<description>Analysing and evaluating the progress of students and the learning techniques used to improve progress and attainment.</description>
+		</item>
+		<item>
+			<category>Education</category>
 			<description>Teaching version control (git), team working technologies (gitlab, github, issue tracking etc.) and test driven development, using JavaScript and other languages.</description>
 		</item>
 		
 		<item>
 			<category>Documentation</category>
-			<description>Writing learning materials and documentation of techniques and software.</description>
+			<category>Education</category>
+			<category>HTML</category>
+			<category>Computing</category>
+			<category>JavaScript</category>
+			<category>Blended Learning</category>
+			<description>Implementing interactive blended learning materials (HTML, JavaScript etc.) and documentation of techniques and software.</description>
+		</item>
+		<item>
+			<category>Education</category>
+			<category>HTML</category>
+			<category>JavaScript</category>
+			<category>Computing</category>
+			<description>Delivering innovative physical learning aids, including the <a href="https://github.com/EduMake/walking-cpu">walking-cpu</a> software which produces poster and worksheets for students to explore and discover "Fetch Decode Execute".</description>
 		</item>
 		<item>
 			<category>Education</category>
@@ -112,8 +138,13 @@
 		</item>
 		<item>
 			<category>Education</category>
+			<category>Computing</category>
 			<description>Heavily using Raspberry Pi for teaching of theory, physical computing and engineering. 
 			Using and contributing to the PiNet community and building tools like logicexplorer, a physical logic gate / circuit simulator.</description>
+		</item>
+		<item>
+			<category>Education</category>
+			<description>Supporting the teaching of Creative Digital Media skills, assisting with photography, graphic design, audio and video editing.</description>
 		</item>
 		
 	</experience>
@@ -149,21 +180,44 @@
 		<title>Learning Technologist</title>
 		<summary>Founder member of the Digital Makers Educational Co-operative. Taking on small projects and developing learning materials.</summary>
 		<item>
+			<category>Project Lead</category>
+			<category>Self Led</category>
+			<description>Main developer and project lead on our Education and Development projects ensuring milestones are met.</description>
+		</item>
+		
+		<item>
+			<category>Education</category>
+			<description>Developing micro accrediations using <a href="https://openbadges.org/">Open Badges</a> and approaches combining Blooms Taxonomy and the Experience API.</description>
+		</item>
+		
+		<item>
 			<category>Emerging Technology</category>
 				<category>JavaScript</category>
-			<description>Building Amazon Alexa Skill and learning materials for students to make their own voice activated software for free.</description>
+			<description>Building Amazon Alexa Skills and learning materials for students to make their own voice activated software for free.</description>
 		</item>
 		<item>
 			<category>LESS</category>
 			<category>Handlebars</category>
 			<category>HTML</category>
 			<category>JavaScript</category>
-			<description>Designed the software for <a href="http://junctionarts.org/data-draw/">Data-Draw</a>, a machine for capturing survey data in a tactile and engaging way. It then produces engaging generative animated art works, unique to each visitor from the data. The individual recieves a paper version and can see themselves or the whole day of visitors on-line. The system is written in Javascript using HTML, SVG, LESS and Handlebars templating, producing a very adaptable system for use by many organisations.</description>
+			<description>Designed the software for <a href="http://junctionarts.org/data-draw/">Data-Draw</a>, a machine for capturing survey data in a tactile and engaging way. It then produces engaging generative animated art works, unique to each visitor from the data. The individual recieves a paper version and can see themselves or the whole day of visitors on-line. The system is written in JavaScript using HTML, SVG, LESS and Handlebars templating, producing a very adaptable system for use by many organisations.</description>
+		</item>
+		<item>
+			<category>Virtual Reality</category>
+			<category>Emerging Technology</category>
+			<category>HTML</category>
+			<category>JavaScript</category>
+			<description>Experimenting with Virtual Reality learning materials starting with <a href="https://vr-atoms.herokuapp.com/">vr-atoms</a>, GCSE Chemistry atom models built in WebVR / A-frame.</description>
+		</item>
+		
+		<item>
+			<category>JavaScript</category>	<category>Education</category>
+			<description>Built "<a href="https://active-learn.herokuapp.com/">active_learn</a>" and "active_javascript" adaptive learning environments, which give differentiated learning paths way for 
+			GCSE Computing maths skills and JavaScript programming skills.</description>
 		</item>
 		<item>
 			<category>JavaScript</category>	<category>Education</category>
-			<description>Built "active_learn" and "active_javascript" adaptive learning environments, which give differentiated learning paths way for 
-			GCSE Computing maths skills and JavaScript programming skills.</description>
+			<description>Using the Waterbear project to build graphical programming interfaces for teaching physical computing to children as young as 5.</description>
 		</item>
 	</experience>
 
@@ -179,7 +233,7 @@
 			<category>CSS</category>
 			<category>JavaScript</category>
 			<category>Education</category>
-			<description>Designed and taught workshops on many different techincal subjects from installing software to developing HTML, CSS, JavaScript, PHP and Robotic's.</description>
+			<description>Designed and taught workshops on many different techincal subjects from installing software to developing HTML, CSS, JavaScript, PHP and designing Robots.</description>
 		</item>
 		<item>
 			<category>Linux</category>
@@ -273,6 +327,12 @@
 			<category>JavaScript</category>
 			<description>Wrote Web 2.0 style JavaScript rendered user interface elements for quick searches and situations where there are many small incremental updates to be made.</description>
 		</item>
+		<item>
+			<category>System Design</category>
+			<category>Project Lead</category>
+			<description>Project lead on our work for the 'London Marathon Exhibition', developing T-Shirt printing, exhihbition design, sales and promotion web sites.</description>
+		</item>
+		
 		<item>
 			<category>PHP</category>
 			<description>Built SVG plotter driver in PHP for HPGL2 based cutter plotters, used for taking T-Shirt lettering requests and cutting them out of vinyl.</description>
