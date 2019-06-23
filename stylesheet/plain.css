@@ -1,7 +1,7 @@
-body {	
+body {
 	font-size: 11pt; 
-	font-family: "Times New Roman", serif; 
-	text-align:justify; 
+	font-family: "Times New Roman", serif;
+	text-align:justify;
 }
 
 a {
@@ -15,12 +15,12 @@ table {
 }
 
 h1, h2, h3, h4, h5{
-	font-family: Arial, sans-serif; 
+	font-family: Arial, sans-serif;
 }
 
 h1 {
-	font-size: 15pt; 
-	text-align:center; 
+	font-size: 15pt;
+	text-align:center;
 }
 
 h2 {
@@ -51,10 +51,10 @@ ul {
 }
 
 .organisationname {
-	float:left; 
-	font-family: Arial, sans-serif; 
-	font-weight: bold; 
-	width:38%; 
+	float:left;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	width:38%;
 	text-align:left;
 }
 
@@ -65,12 +65,12 @@ ul {
 
 .dates {
 	float:left;
-	width:28%; 
+	width:28%;
 }
 
 .title {
-	float:left; 
-	width:30%;  
+	float:left;
+	width:30%;
 }
 
 .items, .summary {
@@ -82,26 +82,26 @@ ul {
 }
 
 .tel {
-	float:left; 
-	text-align:left; 
+	float:left;
+	text-align:left;
 	width:33%;
 }
 
 .mobile {
-	float:left; 
-	text-align:left; 
+	float:left;
+	text-align:left;
 	width:33%;
 }
 
 .email {
-	float:left; 
-	text-align:center; 
-	width:34%; 
+	float:left;
+	text-align:center;
+	width:34%;
 }
 
 .twitter {
-	float:left; 
-	text-align:right; 
+	float:left;
+	text-align:right;
 	width:33%;
 }
 
