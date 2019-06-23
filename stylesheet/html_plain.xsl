@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
-	<xsl:output 
-		method="html" 
+	<xsl:output
+		method="html"
 		omit-xml-declaration="yes"
-		encoding="UTF-8" 
+		encoding="UTF-8"
 		indent="yes"/>
-	
+
 	<xsl:template match="a">
       <xsl:copy>
         <xsl:copy-of select="@*"/>
           <xsl:apply-templates/>
       </xsl:copy>
 	</xsl:template>
-  
+
 	<xsl:template match="/">
 		<xsl:param name="cat"/>
 		<xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
@@ -24,7 +24,7 @@
 				 <title><xsl:value-of select="cv/candidate/name"/> - CV</title>
 			</head>
 			<body spellcheck="true">
-				<section>
+				<section class="header">
 					<h1>
 						<xsl:value-of select="cv/candidate/name"/>
 					</h1>
@@ -37,13 +37,13 @@
 								</xsl:if>
 							</xsl:for-each>
 						</p>
-					
+
 					    <div class="mobile"><xsl:value-of select="cv/candidate/mobile"/></div>
 					    <div class="email"><xsl:value-of select="cv/candidate/email"/></div>
 					    <div class="twitter">@<xsl:value-of select="cv/candidate/twitter"/></div>
 					</div>
 				</section>
-				
+
 				<section>
 					<h2>Profile</h2>
 			        <div class="item">
@@ -53,10 +53,10 @@
 				        </xsl:for-each>
 					</div>
 				</section>
-				
+
 				<section>
 					<h2>Work Experience</h2>
-					<xsl:for-each select="cv/experience/date[@year &gt;= $from]/..">
+					<xsl:for-each select="cv/experience[@type = '$type']/date[@year &gt;= $from]/..">
 						<xsl:sort select="date[1]/@year" data-type="number" order="descending"/>
 						<xsl:sort select="date[1]/@month" data-type="number" order="descending"/>
 						<div class="item">
@@ -70,11 +70,11 @@
 											<xsl:value-of select="organisation"/>
 										</a>
 									</xsl:if>
-									
+
 									<xsl:if test="not(organisation[@href])">
 										<xsl:value-of select="organisation"/>
 									</xsl:if>
-									
+
 								</div>
 								<div class="dates">
 									<xsl:for-each select="date">
@@ -90,7 +90,7 @@
 										<xsl:if test="@month = 10">Oct</xsl:if>
 										<xsl:if test="@month = 11">Nov</xsl:if>
 										<xsl:if test="@month = 12">Dec</xsl:if>
-													
+
 										<xsl:text> </xsl:text>
 										<xsl:value-of select="@year"/>
 										<xsl:if test="position() &lt; last()">
@@ -99,7 +99,7 @@
 										<xsl:if test="(position() = last()) and (position() = 1)">
 											<xsl:text> - Current</xsl:text>
 										</xsl:if>
-										
+
 									</xsl:for-each>
 								</div>
 								<div class="title">
@@ -109,7 +109,7 @@
 									</xsl:if>
 								</div>
 							</div>
-						
+
 							<xsl:if test="summary">
 								<xsl:if test="string-length(summary)">
 									<div class="summary">
@@ -140,12 +140,12 @@
 						</div>
 					</xsl:for-each>
 				</section>
-				
+
 				<section>
 					<h2>Education / Qualifications</h2>
 					<xsl:for-each select="cv/educationitem/qualification[@level &gt; 2]/..">
 						<xsl:sort select="date"/>
-						<div class="item">
+						<div class="item education">
 							<div class="organisationname">
 								<xsl:value-of select="organisation"/>
 							</div>
@@ -163,7 +163,7 @@
 									<xsl:if test="@month = 10">Oct</xsl:if>
 									<xsl:if test="@month = 11">Nov</xsl:if>
 									<xsl:if test="@month = 12">Dec</xsl:if>
-											
+
 									<xsl:text> </xsl:text>
 									<xsl:value-of select="@year"/>
 									<xsl:if test="position() &lt; last()">
@@ -175,6 +175,9 @@
 								<ul>
 									<xsl:for-each select="qualification">
 										<li>
+											<xsl:attribute name="class">
+												<xsl:value-of select="@type"/>
+											</xsl:attribute>
 											<xsl:value-of select="@type"/> - <xsl:value-of select="@title"/><xsl:if test="@grade"> (<xsl:value-of select="@grade"/>)</xsl:if>
 										</li>
 									</xsl:for-each>
@@ -184,7 +187,7 @@
 					</xsl:for-each>
 				</section>
 				<xsl:if test="$references > 0">
-					<section>		
+					<section>
 						<h2>References</h2>
 						<div class="item">
 							<xsl:for-each select="cv/referee">
@@ -195,7 +198,7 @@
 										<xsl:value-of select="@title"/><br/>
 										<xsl:value-of select="organisation"/>
 									</p>
-								
+
 									<p >
 										<xsl:for-each select="address/*">
 											<xsl:value-of select="."/><br />
@@ -214,7 +217,7 @@
 						<p>Available on request.</p>
 					</div>
 				</xsl:if>
-				
+
 			</body>
 		</html>
 	</xsl:template>

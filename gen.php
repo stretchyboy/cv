@@ -7,6 +7,7 @@
     $sFormat = $_REQUEST['format'];
     $iFrom = $_REQUEST['from'];
     $iDetails = $_REQUEST['details'];
+    $sType = isset($_REQUEST['type'])?($_REQUEST['type']):"";
     $iReferences = isset($_REQUEST['references'])?$_REQUEST['references']:0;
 
     if(!($sXMLName))
@@ -38,6 +39,12 @@
     $sXSL = str_replace('$catergories', $sCats, $sXSL);
     $sXSL = str_replace('$from', $iFrom, $sXSL);
     $sXSL = str_replace('$details', $iDetails, $sXSL);
+
+if($sType==""){
+  $sXSL = str_replace("[@type = '\$type']", '', $sXSL);
+}else{
+    $sXSL = str_replace('$type', $sType, $sXSL);
+  }
     $sXSL = str_replace('$references', $iReferences, $sXSL);
 
     $xslDoc->loadXML($sXSL);
@@ -88,7 +95,7 @@
           $client->setAuthor("Martyn Eggleton");
           $client->setInitialZoom(100);
           $client->setNoModify(true);
-          $client->setFooterHtml("Page <span class='pdfcrowd-page-number'></span> of <span class='pdfcrowd-page-count'></span>");
+          //$client->setFooterHtml("Page <span class='pdfcrowd-page-number'></span> of <span class='pdfcrowd-page-count'></span>");
 
           $sBase = $_SERVER['SERVER_NAME'];//"https://martyns-cv-stretchyboy.c9users.io/";
           //print("sBase $sBase");

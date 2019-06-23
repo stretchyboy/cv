@@ -15,15 +15,20 @@
   $iYear = 0+date("Y");
   $iFrom = (isset($_REQUEST['from'])&&$_REQUEST['from'])?(0+$_REQUEST['from']):($iYear - 20);
   $iReferences = isset($_REQUEST['references'])?(0+$_REQUEST['references']):0;
-
+$sType = isset($_REQUEST['type'])?($_REQUEST['type']):"";
   $iDetails = (isset($_REQUEST['details'])&&$_REQUEST['details'])?(0+$_REQUEST['details']): ($iYear - 15);
 
   if(isset($_REQUEST['job']))
   {
     if (filter_var($_REQUEST['job'], FILTER_VALIDATE_URL)) {
-
-      $handle = fopen($_REQUEST['job'], "r");
-      $contents = fread($handle, filesize($_REQUEST['job']));
+      //print($_REQUEST['job']);
+      $contents = file_get_contents($_REQUEST['job']);
+      $oDoc = new DOMDocument();
+      $bResult = $oDoc->loadHTML($contents);
+      $oContent = $oDoc->getElementsByTagName('body')->item(0);
+      $contents = $oDoc->saveHTML($oContent);
+      //$handle = fopen($_REQUEST['job'], "r");
+      //$contents = fread($handle, filesize($_REQUEST['job']));
       $sJob = strip_tags($contents);
     } else {
       $sJob = $_REQUEST['job'];
@@ -195,6 +200,7 @@
     'aStyles'   => $aStyles,
     'sStyle'    => $sStyle,
     "sXMLName"  => $sXMLName,
+    "sType" => $sType,
     "bPreview"  => $bPreview,
     "iReferences"=> $iReferences
   );

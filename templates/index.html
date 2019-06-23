@@ -54,7 +54,11 @@
       <label>Number of References</label>
       <input name="references" type="number" id="references" value="{{ iReferences }}"/>
       <br />
-      
+
+            <label>Type</label>
+            <input name="type" type="text" id="type" value="{{ sType }}"/>
+            <br />
+
       <input type="hidden" value="{{ sXMLName }}" name='xmlname' />
       <input type="submit" value="Refresh Preview" name="preview"/>
       <!--<input type="submit" value="PDF" name="format"/>-->
@@ -68,10 +72,10 @@
     {% if bPreview %}
       <section>
         <h2>Preview</h2>
-        <iframe width="800px" height="1000px" src="gen.php?layout={{ sLayout }}&style={{ sStyle }}&format=html&xmlname={{ sXMLName|e('url') }}&from={{ iFrom }}&details={{ iDetails }}&catergories={{ aMatches|join(',')|e('url') }}" ></iframe>
+        <iframe width="800px" height="1000px" src="gen.php?layout={{ sLayout }}&style={{ sStyle }}&format=html&xmlname={{ sXMLName|e('url') }}&from={{ iFrom }}&details={{ iDetails }}&type={{ sType }}&catergories={{ aMatches|join(',')|e('url') }}" ></iframe>
       </section>
 
-      <a target="_blank" href="gen.php?layout={{ sLayout }}&style={{ sStyle }}&format=pdf&xmlname={{ sXMLName|e('url') }}&from={{ iFrom }}&details={{ iDetails }}&catergories={{ aMatches|join(',')|e('url') }}" >
+      <a target="_blank" href="gen.php?layout={{ sLayout }}&style={{ sStyle }}&format=pdf&xmlname={{ sXMLName|e('url') }}&from={{ iFrom }}&details={{ iDetails }}&type={{ sType }}&catergories={{ aMatches|join(',')|e('url') }}" >
         PDF
       </a>
 

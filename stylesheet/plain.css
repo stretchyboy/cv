@@ -1,5 +1,5 @@
 body {
-	font-size: 11pt; 
+	font-size: 11pt;
 	font-family: "Times New Roman", serif;
 	text-align:justify;
 }
@@ -18,8 +18,10 @@ h1, h2, h3, h4, h5{
 	font-family: Arial, sans-serif;
 }
 
-h1 {
+.header h1, h1 {
+	font-family: Arial, sans-serif;
 	font-size: 15pt;
+	font-weight: bold;
 	text-align:center;
 }
 
@@ -38,8 +40,12 @@ h1, h2, .item {
     clear:both;
 }
 
-.item {
+.header {
 	margin-bottom:1em;
+}
+
+.item {
+	margin-bottom:0.5em;
 	-webkit-column-break-inside: avoid;
 	page-break-inside: avoid;
 	break-inside: avoid;
@@ -48,6 +54,11 @@ h1, h2, .item {
 ul {
  list-style-type: square;
  list-style-position: inside;
+}
+
+.education li.Level{
+	width:45%;
+	float:left;
 }
 
 .organisationname {
