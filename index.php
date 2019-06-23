@@ -12,11 +12,11 @@
   //    'cache' => __DIR__ . '/compilation_cache',
   ));
 
-  $iYear = date("Y");
-  $iFrom = isset($_REQUEST['from'])?$_REQUEST['from']:$iYear - 20;
-  $iReferences = isset($_REQUEST['references'])?$_REQUEST['references']:0;
+  $iYear = 0+date("Y");
+  $iFrom = (isset($_REQUEST['from'])&&$_REQUEST['from'])?(0+$_REQUEST['from']):($iYear - 20);
+  $iReferences = isset($_REQUEST['references'])?(0+$_REQUEST['references']):0;
 
-  $iDetails = isset($_REQUEST['details'])?$_REQUEST['details']: $iYear - 15;
+  $iDetails = (isset($_REQUEST['details'])&&$_REQUEST['details'])?(0+$_REQUEST['details']): ($iYear - 15);
 
   if(isset($_REQUEST['job']))
   {
@@ -184,8 +184,7 @@
     )
   );
 
-  $template = $twig->load('index.html');
-  $template->display(array(
+  $context = array(
     'aMatches'  => $aMatches,
     'sJob'      => $sJob,
     'iFrom'     => $iFrom,
@@ -198,8 +197,12 @@
     "sXMLName"  => $sXMLName,
     "bPreview"  => $bPreview,
     "iReferences"=> $iReferences
-  ));
+  );
 
+  //print_r($context);
+
+  $template = $twig->load('index.html');
+  $template->display($context);
 
 class alternativeWords
 {

@@ -18,7 +18,7 @@
   </head>
   <body>
     <h1>Martyn's CV Generator.</h1>
-    
+
     <ul class="messages">
       {% for item in aMessages %}
         <li class="{{ item.type }}">{{ item.caption }}</li>
@@ -28,20 +28,20 @@
     <section>
       <form action="" method="POST">
       <h2>Options</h2>
-    
+
       <label>Layout</label>
       <select id="layoutselect" name="layout">
         {% for item in aLayouts %}
               <option value="{{ item.name }}" {% if item.name == sLayout %}selected{% endif %} >{{ item.caption }}</option>
-          {% endfor %}  
+          {% endfor %}
       </select>
       <br />
-      
+
       <label>Style</label>
       <select id="styleselect" name="style">
         {% for item in aStyles %}
           <option value="{{ item.name }}" {% if item.name == sStyle %}selected{% endif %} >{{ item.caption }}</option>
-        {% endfor %}  
+        {% endfor %}
       </select>
       <br />
       <label>Job Details Start Year</label>
@@ -50,32 +50,32 @@
       <label>Job List Start Year</label>
       <input name="from" type="number" id="from" value="{{ iFrom }}"/>
       <br />
-      
+
       <label>Number of References</label>
-      <input name="from" type="number" id="references" value="{{ iReferences }}"/>
+      <input name="references" type="number" id="references" value="{{ iReferences }}"/>
       <br />
       
       <input type="hidden" value="{{ sXMLName }}" name='xmlname' />
       <input type="submit" value="Refresh Preview" name="preview"/>
       <!--<input type="submit" value="PDF" name="format"/>-->
-      
+
       <h2>Job Description to filter for</h2>
       <textarea name='job' cols="80" rows="20">{{ sJob }}</textarea>
-      
+
       </form>
     </section>
-    
+
     {% if bPreview %}
       <section>
-        <h2>Preview</h2>  
+        <h2>Preview</h2>
         <iframe width="800px" height="1000px" src="gen.php?layout={{ sLayout }}&style={{ sStyle }}&format=html&xmlname={{ sXMLName|e('url') }}&from={{ iFrom }}&details={{ iDetails }}&catergories={{ aMatches|join(',')|e('url') }}" ></iframe>
       </section>
-      
+
       <a target="_blank" href="gen.php?layout={{ sLayout }}&style={{ sStyle }}&format=pdf&xmlname={{ sXMLName|e('url') }}&from={{ iFrom }}&details={{ iDetails }}&catergories={{ aMatches|join(',')|e('url') }}" >
         PDF
       </a>
-      
+
     {% endif %}
-    
+
   </body>
 </html>
