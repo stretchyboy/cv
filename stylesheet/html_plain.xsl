@@ -40,8 +40,34 @@
 
 					    <div class="mobile"><xsl:value-of select="cv/candidate/mobile"/></div>
 					    <div class="email"><xsl:value-of select="cv/candidate/email"/></div>
-					    <div class="twitter">@<xsl:value-of select="cv/candidate/twitter"/></div>
-					</div>
+
+							<xsl:if test="cv/candidate/twitter">
+								<div class="twitter">
+									<a target="_blank">
+									<xsl:attribute name="href">https://twitter.com/<xsl:value-of select="cv/candidate/twitter" /></xsl:attribute>
+									twitter: @<xsl:value-of select="cv/candidate/twitter"/>
+								</a>
+							</div>
+							</xsl:if>
+
+							<xsl:if test="cv/candidate/linkedin">
+								<div class="linkedin">
+									<a target="_blank">
+									<xsl:attribute name="href">https://www.linkedin.com/in/<xsl:value-of select="cv/candidate/linkedin" />/</xsl:attribute>
+									linkedin: <xsl:value-of select="cv/candidate/linkedin"/>
+								</a>
+							</div>
+							</xsl:if>
+
+							<xsl:if test="cv/candidate/github">
+								<div class="github">
+									<a target="_blank">
+									<xsl:attribute name="href">https://github.com/<xsl:value-of select="cv/candidate/github" />/</xsl:attribute>
+									github: <xsl:value-of select="cv/candidate/github"/>
+								</a>
+							</div>
+							</xsl:if>
+						</div>
 				</section>
 
 				<section>
@@ -118,10 +144,10 @@
 								</xsl:if>
 							</xsl:if>
 							<xsl:if test="date[@year &gt;=$details]">
-								<xsl:if test="item[contains($catergories,@category)]/description">
+								<xsl:if test="item[contains($catergories,category)]/description">
 									<div class="items">
 										<ul>
-											<xsl:for-each select="item[contains($catergories,@category)]/description">
+											<xsl:for-each select="item[contains($catergories,category)]/description">
 												<li>
 													<xsl:apply-templates/>
 												</li>
@@ -143,7 +169,7 @@
 
 				<section>
 					<h2>Education / Qualifications</h2>
-					<xsl:for-each select="cv/educationitem/qualification[@level &gt; 2]/..">
+					<xsl:for-each select="cv/educationitem/qualification[@level &gt; 1]/..">
 						<xsl:sort select="date"/>
 						<div class="item education">
 							<div class="organisationname">

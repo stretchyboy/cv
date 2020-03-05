@@ -6,6 +6,7 @@ body {
 
 a {
 	color: black;
+	text-decoration: none;
 }
 
 table {
@@ -50,12 +51,25 @@ h1, h2, .item {
 	page-break-inside: avoid;
 	break-inside: avoid;
 }
-
-ul {
- list-style-type: square;
- list-style-position: inside;
+ul{
+    margin-left: 1em;
 }
 
+li{
+	 list-style-type: square;
+    list-style-position: outside;
+    padding-left: 0em;
+		margin-left: 0em;
+}
+/*
+li {
+ list-style-type: square;
+ list-style-position: inside;
+ text-indent: -1em;
+ padding-left:1em;
+
+ }
+*/
 .education li.Level{
 	width:45%;
 	float:left;
@@ -67,6 +81,7 @@ ul {
 	font-weight: bold;
 	width:38%;
 	text-align:left;
+	margin-bottom: 0.25em;
 }
 
 .organisationname a {
@@ -115,6 +130,24 @@ ul {
 	text-align:right;
 	width:33%;
 }
+
+.linkedin {
+	float:left;
+	text-align:left;
+	width:34%;
+}
+
+.github {
+	float:right;
+	text-align:right;
+	width:33%;
+}
+
+
+.address, .tel, .mobile, .email, .twitter, .linkedin, .github {
+	margin-bottom: 0.25em;
+}
+
 
 .referee {
 	width:50%;

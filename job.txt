@@ -1,16 +1,18 @@
-We are looking for talented individuals to join our Software Development team. The Junior PHP Developer will help support and grow our existing systems, tools and products and to drive forward new ideas and innovation that will allow ASK4 to remain at the head of the pack.
+Hack The Box is looking for a creative, dedicated and skilled individual to help us move the platform forward. The right candidate will need to be able to work remotely and on-premise, be adaptable regarding programming languages and paradigms and have skills in managing and coaching your fellow engineers.
+Being the platform that it is, a passion for security is an absolute must for this position. Whether you are a pen-tester or practice security as a hobby, experience in the field is a must.
+We're all hackers at heart, and as such a hacker mentality will enable you to contribute and integrate more efficiently. A slew of certifications or university degrees are not what we're looking for - what we're looking for is passion.
 
-Role Description:
-
-Junior software developer, with some UI experience, to work on ASK4 systems, services and products.
-
-Skills & Experience:
-
-    Around 2 years experience in a similar role
-    Basic PHP
-    Good graphic design
-    Javascript
-    HTML/CSS
-    Proven documentation skills
-
-This role offers the potential to progress within the team, moving on to designing more complex projects.
+Developing features in HTB platforms and tools
+Reviewing Pull Requests submitted by your fellow junior engineers
+Mentoring junior sw engineers;
+Contribute to architectural and sw design decisions
+Contribute and maintaining technical documentation and specifications
+Maintaining the platform by reacting to issues raised by our users
+A good grasp of the English language is an absolute requirement
+As a part of Hack The Box, you will have the opportunity to help shape the future of the platform, bringing your own flare and skill set to our world-class team.
+Benefits of being part of the team will include:
+Company supplied state-of-the art equipment
+Education and trainings to help you enhance your skills
+Attendance of industry conferences and meetups
+Full access to the Hack The Box lab offerings
+Flexibility in working hours

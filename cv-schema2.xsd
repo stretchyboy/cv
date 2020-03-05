@@ -6,9 +6,9 @@
       <xs:sequence>
         <xs:element ref="candidate"></xs:element>
         <xs:element ref="profile"></xs:element>
-        <xs:element ref="experience" maxOccurs="unbounded"></xs:element>
-        <xs:element ref="educationitem" maxOccurs="unbounded"></xs:element>
-        <xs:element ref="referee" maxOccurs="unbounded"></xs:element>
+        <xs:element ref="experience" maxOccurs="1000"></xs:element>
+        <xs:element ref="educationitem" maxOccurs="1000"></xs:element>
+        <xs:element ref="referee" maxOccurs="1000"></xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -30,7 +30,7 @@
   <xs:element name="address">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="line" type="xs:string" maxOccurs="unbounded"></xs:element>
+        <xs:element name="line" type="xs:string" maxOccurs="1000"></xs:element>
         <xs:element name="city" type="xs:string"></xs:element>
         <xs:element name="postcode" type="xs:string"></xs:element>
       </xs:sequence>
@@ -39,28 +39,29 @@
   <xs:element name="profile">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="item" maxOccurs="unbounded"></xs:element>
+        <xs:element ref="item" minOccurs="0" maxOccurs="1000"></xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+
   <xs:element name="item">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="category" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+        <xs:element name="category" type="xs:string" minOccurs="0" maxOccurs="1000"></xs:element>
         <xs:element ref="description"></xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  
+
   <xs:element name="description">
     <xs:complexType mixed="true">
       <xs:all>
-        <xs:element ref="a" minOccurs="0"></xs:element>
+        <xs:element ref="a" minOccurs="0" maxOccurs="1000"></xs:element>
       </xs:all>
     </xs:complexType>
   </xs:element>
-  
-   <xs:element name="a"> 
+
+   <xs:element name="a">
    <xs:complexType>
     <xs:simpleContent>
       <xs:extension base="xs:string">
@@ -70,15 +71,25 @@
     </xs:complexType>
   </xs:element>
 
-  
+  <xs:element name="organisation">
+  <xs:complexType>
+   <xs:simpleContent>
+     <xs:extension base="xs:string">
+       <xs:attribute name="href" type="xs:string"></xs:attribute>
+     </xs:extension>
+   </xs:simpleContent>
+   </xs:complexType>
+  </xs:element>
+
   <xs:element name="experience">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="organisation" type="xs:string"></xs:element>
-        <xs:element ref="date" maxOccurs="unbounded"></xs:element>
-        <xs:element name="title" type="xs:string"></xs:element>
+        <xs:element ref="organisation"></xs:element>
+        <xs:element ref="date" maxOccurs="1000"></xs:element>
+        <xs:element name="title" minOccurs="0" type="xs:string"></xs:element>
         <xs:element name="summary" minOccurs="0" type="xs:string"></xs:element>
-        <xs:element ref="item" minOccurs="0" maxOccurs="unbounded"></xs:element>
+        <xs:element ref="item" minOccurs="0" maxOccurs="1000"></xs:element>
+        <xs:element name="departure" minOccurs="0" type="xs:string"></xs:element>
       </xs:sequence>
       <xs:attribute name="type" type="xs:string" use="required"></xs:attribute>
     </xs:complexType>
@@ -92,15 +103,16 @@
   <xs:element name="educationitem">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="organisation" type="xs:string"></xs:element>
-        <xs:element ref="date" maxOccurs="unbounded"></xs:element>
-        <xs:element ref="qualification" maxOccurs="unbounded"></xs:element>
+        <xs:element ref="organisation"></xs:element>
+        <xs:element ref="date" maxOccurs="1000"></xs:element>
+        <xs:element ref="qualification" maxOccurs="1000"></xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="qualification">
     <xs:complexType>
       <xs:attribute name="grade" type="xs:string"></xs:attribute>
+      <xs:attribute name="level" type="xs:string"></xs:attribute>
       <xs:attribute name="title" type="xs:string" use="required"></xs:attribute>
       <xs:attribute name="type" type="xs:string" use="required"></xs:attribute>
     </xs:complexType>
@@ -108,8 +120,10 @@
   <xs:element name="referee">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="organisation" type="xs:string"></xs:element>
+        <xs:element ref="organisation"></xs:element>
         <xs:element ref="address"></xs:element>
+        <xs:element name="tel" type="xs:string"  minOccurs="0"></xs:element>
+        <xs:element name="email" type="xs:string"  minOccurs="0"></xs:element>
       </xs:sequence>
       <xs:attribute name="name" type="xs:string" use="required"></xs:attribute>
       <xs:attribute name="title" type="xs:string" use="required"></xs:attribute>

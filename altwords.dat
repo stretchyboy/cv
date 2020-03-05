@@ -64,6 +64,7 @@
   'javascript' => 
   array (
     0 => 'javascript',
+    1 => 'languages',
   ),
   'linux' => 
   array (
@@ -72,10 +73,12 @@
     2 => 'UNIX operating system',
     3 => 'UNIX system',
     4 => 'linux',
+    5 => 'unix',
   ),
   'php' => 
   array (
     0 => 'php',
+    1 => 'languages',
   ),
   'software' => 
   array (
@@ -175,9 +178,9 @@
     4 => 'educational activity',
     5 => 'training',
     6 => 'breeding',
-    7 => 'Department of Education',
-    8 => 'Education Department',
-    9 => 'Education',
+    7 => 'department of education',
+    8 => 'education department',
+    9 => 'education',
     10 => 'acquisition',
     11 => 'activity',
     12 => 'cognitive content',
@@ -228,11 +231,12 @@
   array (
     0 => 'preparation',
     1 => 'grooming',
-    2 => 'education',
     3 => 'breeding',
     4 => 'activity',
     5 => 'upbringing',
     6 => 'training',
+    7 => 'coaching',
+    8 => 'mentoring',
   ),
   'webdev' => 
   array (
@@ -255,6 +259,11 @@
   'software development' => 
   array (
     0 => 'software development',
+  ),
+  'developer' => 
+  array (
+    0 => 'developer',
+    1 => 'development',
   ),
   'web development' => 
   array (
@@ -321,6 +330,7 @@
     28 => 'utilisation',
     29 => 'utilization',
     30 => 'development',
+    31 => 'developer',
   ),
   'evaluation' => 
   array (
@@ -344,5 +354,103 @@
     7 => 'basic cognitive process',
     8 => 'education',
     9 => 'learning',
+  ),
+  'c#' => 
+  array (
+    0 => 'c#',
+    1 => 'languages',
+  ),
+  'c++' => 
+  array (
+    0 => 'c++',
+    1 => 'languages',
+  ),
+  'languages' => 
+  array (
+    0 => 'languages',
+    1 => 'python',
+    2 => 'c#',
+    3 => 'c++',
+    4 => 'javascript',
+  ),
+  'python' => 
+  array (
+    0 => 'python',
+    1 => 'languages',
+  ),
+  'mentoring' => 
+  array (
+    0 => 'mentoring',
+    1 => 'coaching',
+  ),
+  'git' => 
+  array (
+    0 => 'rotter',
+    1 => 'dirty dog',
+    2 => 'rat',
+    3 => 'skunk',
+    4 => 'stinker',
+    5 => 'stinkpot',
+    6 => 'bum',
+    7 => 'puke',
+    8 => 'crumb',
+    9 => 'lowlife',
+    10 => 'scum bag',
+    11 => 'so-and-so',
+    12 => 'disagreeable person',
+    13 => 'unpleasant person',
+    14 => 'git',
+  ),
+  'music' => 
+  array (
+    0 => 'euphony',
+    1 => 'medicine',
+    2 => 'activity',
+    3 => 'auditory communication',
+    4 => 'auditory sensation',
+    5 => 'penalisation',
+    6 => 'penalization',
+    7 => 'penalty',
+    8 => 'punishment',
+    9 => 'sound',
+    10 => 'music',
+  ),
+  'web' => 
+  array (
+    0 => 'net',
+    1 => 'tissue',
+    2 => 'weave',
+    3 => 'web',
+  ),
+  'security' => 
+  array (
+    0 => 'protection',
+    1 => 'certificate',
+    2 => 'surety',
+    3 => 'security department',
+    4 => 'security system',
+    5 => 'security measure',
+    6 => 'security measures',
+    7 => 'assets',
+    8 => 'bravery',
+    9 => 'department',
+    10 => 'electrical device',
+    11 => 'fearlessness',
+    12 => 'guarantee',
+    13 => 'guard',
+    14 => 'instrument',
+    15 => 'legal document',
+    16 => 'legal instrument',
+    17 => 'official document',
+    18 => 'precaution',
+    19 => 'safeguard',
+    20 => 'safety',
+    21 => 'section',
+    22 => 'transferred possession',
+    23 => 'transferred property',
+    24 => 'warrant',
+    25 => 'warrantee',
+    26 => 'warranty',
+    27 => 'security',
   ),
 );
