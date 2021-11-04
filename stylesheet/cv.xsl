@@ -51,7 +51,7 @@
     			-->
 				<h2>Profile</h2>
         <p>
-				  <xsl:for-each select="cv/profile/item[contains(@catergories,$cat)]/description">
+				  <xsl:for-each select="cv/profile/item[contains(@categories,$cat)]/description">
 					  <xsl:value-of select="."/><xsl:text> </xsl:text>
           </xsl:for-each>
 				</p>
@@ -91,7 +91,7 @@
 					<div class="items">
 									
 						<ul>
-							<xsl:for-each select="item[contains(@catergories,$cat)]/description">
+							<xsl:for-each select="item[contains(@categories,$cat)]/description">
 								<li>
 									<xsl:value-of select="."/>
 								</li>

@@ -25,20 +25,20 @@
   </candidate>
   <item type="Profile" categories="Programming">A skilled programmer and trainer with over 10 years experience in web
     technologies especially HTML, PHP and JavaScript.</item>
-  <!--<item type="Profile" categories="System Design">Dedicated to bringing the most efficient and
+  <item type="Profile" categories="System Design">Dedicated to bringing the most efficient and
     usable user experience to new and existing systems, by bringing forward innovative ideas and
-    developing them into complete systems.</item>-->
+    developing them into complete systems.</item>
   <item type="Profile" categories="">Good awareness of design, planning &amp; problem solving
     techniques and approaches in a variety of situations from developing functional specifications
     for technical solutions with users, to process development, training, team and capacity building.</item>
   <item type="Profile" categories="Programming">Experience of high profile and high financial turnover systems
     being the lead developer for the 'Flora London Marathon Exhibition' website and writing for
     systems with an annual turnover in excess of &pound;14 million.</item>
-  <!--<item type="Profile" categories="">A hardworking individual with experience of working in small
-    teams as well as written, verbal and visual communication.</item>-->
-  <!--<item type="Profile" categories="">An aptitude for software development, systems design and training and coaching.</item>-->
-  <!--<item type="Profile" categories="">A hardworking individual with good interpersonal, written, verbal and visual communications skills and an aptitude for software development, employment advice, training and coaching.</item>  -->
-  <!--<item type="Profile" categories="">Good desktop publishing and web development skills both aesthetically and technically.</item>-->
+  <item type="Profile" categories="">A hardworking individual with experience of working in small
+    teams as well as written, verbal and visual communication.</item>
+  <item type="Profile" categories="">An aptitude for software development, systems design and training and coaching.</item>
+  <item type="Profile" categories="">A hardworking individual with good interpersonal, written, verbal and visual communications skills and an aptitude for software development, employment advice, training and coaching.</item> 
+  <item type="Profile" categories="">Good desktop publishing and web development skills both aesthetically and technically.</item>
   <item type="Profile" categories="">Flexible, adaptable and self developing with an aptitude for picking up ICT systems and techniques (For example I am currently learning JAVA and XUL for two personal projects).</item>
   <item type="Profile" categories="">Good training and development skills ranging from identifying learners needs to preparing sessions and giving feedback and assessment.</item>
   <item type="Profile" categories="">A keen free and open source software advocate who contributes to and leads various FOSS projects.</item>
@@ -51,14 +51,14 @@
     
     <item categories="Linux">Teaching workshops with Access-Space users new to Linux and FOSS on how to choose install and configure a GNU/Linux distribution, using course notes I wrote in preparation (http://knowhow.access-space.org/wiki/doku.php?id=courses:ilit).</item>
     <item categories="Hardware">Teaching some users the parts of a PC and how to select build and test PCs from component parts, also constructing PCs to train on.</item>
-    <!--<item categories="Community">Working within a community setting</item>
+    <item categories="Community">Working within a community setting</item>
     <item categories="Hardware">Experience refurbishing second user IT equipment</item>
-    <item categories="Training">Running/facilitating workshops, learning environments</item>-->
+    <item categories="Training">Running/facilitating workshops, learning environments</item>
     <item categories="Software">Sharing knowledge of Open Source Software utilities and tools (and the ethos behind them) for development with other users including creativity programs, editors and programming libraries.</item>
     <!--<item categories="">Excellent Communication Skills</item>-->
-    <!--<item categories="Documentation">A wide range of writing styles from reports through to simple how to documents</item>
+    <item categories="Documentation">A wide range of writing styles from reports through to simple how to documents</item>
     <item categories="">The ability to self manage and prioritise own workload</item>
-    <item categories="">Excellent time management</item>-->
+    <item categories="">Excellent time management</item>
 
     <item categories="WebDev">Assisting in the creation of various Access-Space Web pages including modifying HTML templates for dokuwiki.</item>
   </experience>
@@ -70,9 +70,9 @@
     
     <item categories="Solutions Development">Developed Open Source projects for managing XML OpenSong data using mootools enhanced HTML and PHP, and one for using the Nintendo WiiMote with MIT Scratch children's programming language.</item>
     <item categories="WebDev">Developed own website using dokuwiki and mootools to enhance the HTML.</item>
-    <!--<item categories="Solutions Development">Designed and implemented early proof of concept for a
-      port of OpenSong to XUL using JavaScript and SQLite.</item>-->
-    <!--<item categories="XML">Created customisable CV writing project using XML and XSLT.</item>-->
+    <item categories="Solutions Development">Designed and implemented early proof of concept for a
+      port of OpenSong to XUL using JavaScript and SQLite.</item>
+    <item categories="XML">Created customisable CV writing project using XML and XSLT.</item>
   </experience>
 
   

@@ -46,7 +46,7 @@
 				
 				<xsl:for-each select="params/category">
 					<xsl:variable name="catsec" select="."/>
-					<xsl:if test="(/cv/profile/item/category[.=$catsec]/../description) or (/cv/experience/date[@year &gt;=$details]/../item/category[contains($catergories,.)][1][.=$catsec]/..)">
+					<xsl:if test="(/cv/profile/item/category[.=$catsec]/../description) or (/cv/experience/date[@year &gt;=$details]/../item/category[contains($categories,.)][1][.=$catsec]/..)">
 					<section>
 						<h2><xsl:value-of select="$catsec"/></h2>
 				        <div class="item">
@@ -57,7 +57,7 @@
 									</li>
 						        </xsl:for-each>
 					        
-						        <xsl:for-each select="/cv/experience/date[@year &gt;=$details]/../item/category[contains($catergories,.)][1][.=$catsec]/..">
+						        <xsl:for-each select="/cv/experience/date[@year &gt;=$details]/../item/category[contains($categories,.)][1][.=$catsec]/..">
 									<xsl:sort select="date[1]/@year" data-type="number" order="descending"/>
 									<xsl:sort select="date[1]/@month" data-type="number" order="descending"/>
 									<xsl:for-each select="description">

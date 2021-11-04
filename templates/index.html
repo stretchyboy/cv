@@ -51,6 +51,14 @@
       <input name="from" type="number" id="from" value="{{ iFrom }}"/>
       <br />
 
+      <label>Education Details Start Year</label>
+      <input name="educationdetails" type="number" id="educationdetails" value="{{ iEducationDetails }}"/>
+      <br />
+      <label>Education List Start Year</label>
+      <input name="educationfrom" type="number" id="educationfrom" value="{{ iEducationFrom }}"/>
+      <br />
+
+
       <label>Number of References</label>
       <input name="references" type="number" id="references" value="{{ iReferences }}"/>
       <br />
@@ -72,10 +80,10 @@
     {% if bPreview %}
       <section>
         <h2>Preview</h2>
-        <iframe width="800px" height="1000px" src="gen.php?layout={{ sLayout }}&style={{ sStyle }}&format=html&xmlname={{ sXMLName|e('url') }}&from={{ iFrom }}&details={{ iDetails }}&type={{ sType }}&catergories={{ aMatches|join(',')|e('url') }}" ></iframe>
+        <iframe width="800px" height="1000px" src="gen.php?layout={{ sLayout }}&style={{ sStyle }}&format=html&xmlname={{ sXMLName|e('url') }}&from={{ iFrom }}&details={{ iDetails }}&educationfrom={{ iEducationFrom }}&educationdetails={{ iEducationDetails }}&type={{ sType }}&categories={{ aMatches|join(',')|e('url') }}" ></iframe>
       </section>
 
-      <a target="_blank" href="gen.php?layout={{ sLayout }}&style={{ sStyle }}&format=pdf&xmlname={{ sXMLName|e('url') }}&from={{ iFrom }}&details={{ iDetails }}&type={{ sType }}&catergories={{ aMatches|join(',')|e('url') }}" >
+      <a target="_blank" href="gen.php?layout={{ sLayout }}&style={{ sStyle }}&format=pdf&xmlname={{ sXMLName|e('url') }}&from={{ iFrom }}&details={{ iDetails }}&educationfrom={{ iEducationFrom }}&educationdetails={{ iEducationDetails }}&type={{ sType }}&categories={{ aMatches|join(',')|e('url') }}" >
         PDF
       </a>
 

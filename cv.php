@@ -1,5 +1,5 @@
 <?php
-//http://localhost/projects/cv/gen.php?style=html_CV_Grey&xmlname=cv&catergories=Description,System%20Design,Linux,Hardware,Software,WebDev,System+Admin&from=1998
+//http://localhost/projects/cv/gen.php?style=html_CV_Grey&xmlname=cv&categories=Description,System%20Design,Linux,Hardware,Software,WebDev,System+Admin&from=1998
 
     function xsl_format_date($xVal, $sFormat)
     {
@@ -18,7 +18,7 @@
     //$sXSL = str_replace('format-date', "php:function('xsl_format_date'," $sXSL);
 
 
-    $sXSL = str_replace('$catergories', "'Description,System Design,Linux,Hardware,Software,WebDev'", $sXSL);
+    $sXSL = str_replace('$categories', "'Description,System Design,Linux,Hardware,Software,WebDev'", $sXSL);
 
 
     //echo "sXSL  =" .$sXSL ."\n";
@@ -36,7 +36,7 @@
 
     $proc->importStylesheet($xslDoc);
 
-    //$proc->setParameter  ('', 'catergories', 'Linux,Hardware,Software,WebDev');
+    //$proc->setParameter  ('', 'categories', 'Linux,Hardware,Software,WebDev');
 
 
     $foDoc = $proc->transformToDoc($xmlDoc);

@@ -38,7 +38,7 @@
 				 
 				<h2>Profile</h2>
 		        <p>
-					<xsl:for-each select="cv/profile/item[contains($catergories,@category)]/description">
+					<xsl:for-each select="cv/profile/item[contains($categories,@category)]/description">
 						<xsl:value-of select="."/><xsl:text> </xsl:text>
 			        </xsl:for-each>
 				</p>
@@ -90,10 +90,10 @@
 							</xsl:if>
 						</xsl:if>
 						<xsl:if test="date[@year &gt;= $from]">
-							<xsl:if test="item[contains($catergories,@category)]/description">
+							<xsl:if test="item[contains($categories,@category)]/description">
 								<div class="items">
 									<ul>
-										<xsl:for-each select="item[contains($catergories,@category)]/description">
+										<xsl:for-each select="item[contains($categories,@category)]/description">
 											<li>
 												<xsl:value-of select="."/>
 											</li>

@@ -4,7 +4,7 @@
   <xsl:output method="xml" indent="yes"/>
   <xsl:key name="qualificationtypes" match="//qualification" use="@type"/>
   <xsl:template match="/">
-    <xsl:param name="catergories" />
+    <xsl:param name="categories" />
     <fo:root>
 
       
@@ -67,7 +67,7 @@
           </fo:block>
 
           <fo:block padding-before="12pt">
-            <xsl:for-each select="cv/profile/item[contains($catergories,category)]/description">
+            <xsl:for-each select="cv/profile/item[contains($categories,category)]/description">
               <xsl:value-of select="."/>
               <xsl:text> </xsl:text>
             </xsl:for-each>
@@ -124,12 +124,12 @@
                       </fo:block>
                     </fo:table-cell>
                   </fo:table-row>
-                  <xsl:if test="count(item[contains($catergories,category)])">
+                  <xsl:if test="count(item[contains($categories,category)])">
                   <fo:table-row  keep-with-previous="always">
                     <fo:table-cell number-columns-spanned="3">
                       <fo:list-block
                         provisional-distance-between-starts="18pt" provisional-label-separation="3pt">
-                        <xsl:for-each select="item[contains($catergories,category)]">
+                        <xsl:for-each select="item[contains($categories,category)]">
                           <fo:list-item keep-with-previous="always">
                             <fo:list-item-label end-indent="label-end()">
                               <fo:block>&#x2022;</fo:block>

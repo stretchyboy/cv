@@ -3,10 +3,13 @@
     $sLayout = $_REQUEST['layout'];
     $sStyle = $_REQUEST['style'];
     $sXMLName = $_REQUEST['xmlname'];
-    $sCatergories = $_REQUEST['catergories'];
+    $sCategories = $_REQUEST['categories'];
     $sFormat = $_REQUEST['format'];
     $iFrom = $_REQUEST['from'];
     $iDetails = $_REQUEST['details'];
+    $iEducationFrom = $_REQUEST['educationfrom'];
+    $iEducationDetails = $_REQUEST['educationdetails'];
+  
     $sType = isset($_REQUEST['type'])?($_REQUEST['type']):"";
     $iReferences = isset($_REQUEST['references'])?$_REQUEST['references']:0;
 
@@ -65,12 +68,14 @@
       exit;
     }
 
-    $aCats = explode(",", $sCatergories);
+    $aCats = explode(",", $sCategories);
     $sCats = "'".implode("|", $aCats)."'";
 
-    $sXSL = str_replace('$catergories', $sCats, $sXSL);
+    $sXSL = str_replace('$categories', $sCats, $sXSL);
     $sXSL = str_replace('$from', $iFrom, $sXSL);
     $sXSL = str_replace('$details', $iDetails, $sXSL);
+    $sXSL = str_replace('$educationfrom', $iEducationFrom, $sXSL);
+    $sXSL = str_replace('$educationdetails', $iEducationDetails, $sXSL);
 
 if($sType==""){
   $sXSL = str_replace("[@type = '\$type']", '', $sXSL);

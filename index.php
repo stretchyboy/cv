@@ -1,23 +1,23 @@
 <?php
 
-  require __DIR__ . '/vendor/autoload.php';
-  //require_once __DIR__ . '/vendor/twig/twig/lib/Twig/Autoloader.php';
-  //use twig/Autoloader;
-
-  //Twig_Autoloader::register();
-
+  #require __DIR__ . '/vendor/autoload.php';
+  require_once 'vendor/autoload.php';
+  
   $loader = new \Twig\Loader\FilesystemLoader('templates');
-  //$loader = new Twig_Loader_Filesystem('templates');
   $twig = new Twig_Environment($loader, array(
   //    'cache' => __DIR__ . '/compilation_cache',
   ));
 
   $iYear = 0+date("Y");
   $iFrom = (isset($_REQUEST['from'])&&$_REQUEST['from'])?(0+$_REQUEST['from']):($iYear - 20);
-  $iReferences = isset($_REQUEST['references'])?(0+$_REQUEST['references']):0;
-$sType = isset($_REQUEST['type'])?($_REQUEST['type']):"";
   $iDetails = (isset($_REQUEST['details'])&&$_REQUEST['details'])?(0+$_REQUEST['details']): ($iYear - 15);
-
+  
+  $iEducationFrom = (isset($_REQUEST['educationfrom'])&&$_REQUEST['educationfrom'])?(0+$_REQUEST['educationfrom']):3;
+  $iEducationDetails = (isset($_REQUEST['educationdetails'])&&$_REQUEST['educationdetails'])?(0+$_REQUEST['educationdetails']): ($iYear - 20);
+  
+  $iReferences = isset($_REQUEST['references'])?(0+$_REQUEST['references']):0;
+  $sType = isset($_REQUEST['type'])?($_REQUEST['type']):"";
+  
   if(isset($_REQUEST['job']))
   {
     if (filter_var($_REQUEST['job'], FILTER_VALIDATE_URL)) {
@@ -96,6 +96,27 @@ $sType = isset($_REQUEST['type'])?($_REQUEST['type']):"";
   //echo "\n<br><pre>\naMatches =" .var_export($aMatches, TRUE)."</pre>";
   //$sThesaurusKey = 'e4aeec2b38f65bf0c0ab184bb0a3fe14';
 
+  $input = str_replace(array("\n", "\t"), " ", $sJob);
+  $client = Algorithmia::client("simyGavBCByypprWgpDOxe7OQAB1");
+  #$algo = $client->algo("StanfordNLP/PartofspeechTagger/0.1.0");
+  #$algo = $client->algo('nlp/Summarizer/0.1.3');
+  $algo = $client->algo("ApacheOpenNLP/POSTagger/0.1.1");
+
+  #$algo = $client->algo("demo/Hello/0.1.0");
+  $algo->setOptions(["timeout" => 300]); //optional
+  try{
+  $sReturn = ($algo->pipe($input)->result);
+  } catch(Exception $err){
+    $sReturn ="";
+    $aMessages[] = array(
+      'type'  => 'error',
+      //'caption' => "Categories =" .var_export(array_keys($aCategories), TRUE)
+      'caption' => $err->getMessage()
+    );
+  
+  }
+
+  /*
   $ch = curl_init("https://api.algorithmia.com/v1/algo/StanfordNLP/PartofspeechTagger/0.1.0");
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
   curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -111,15 +132,16 @@ $sType = isset($_REQUEST['type'])?($_REQUEST['type']):"";
   }
   curl_close($ch);
   //echo("<pre>sReturn =".$sReturn."</pre>");
+  */
 
   $aReturn = json_decode($sReturn, true);
-  //echo("<pre>aReturn =".var_export($aReturn)."</pre>");
+  echo("<pre>aReturn =".var_export($aReturn)."</pre>");
   $sResult = $aReturn['result'];
   //echo("<pre>sResult =".$sResult."</pre>");
   $aResult =  explode ( " " , $sResult);
 
-  //echo("<pre>sValue =\n");
-  //echo("<pre>aResult =".var_export($aResult)."</pre>");
+  echo("<pre>sValue =\n");
+  echo("<pre>aResult =".var_export($aResult)."</pre>");
   $aWords = [];
   foreach ($aResult as &$sValue) {
     //echo("<pre>sValue =".$sValue."</pre>");
@@ -189,11 +211,21 @@ $sType = isset($_REQUEST['type'])?($_REQUEST['type']):"";
     )
   );
 
+  $aMessages[] = array(
+    'type'  => 'warning',
+    //'caption' => "From Job =" .var_export(array_keys($aMatches), TRUE)
+    'caption' => "Using Layout: $sLayout, Style: $sStyle, XML Name: $sXMLName & Type: $sType"
+  );
+
+
   $context = array(
     'aMatches'  => $aMatches,
     'sJob'      => $sJob,
     'iFrom'     => $iFrom,
     'iDetails'  => $iDetails,
+    'iEducationFrom'     => $iEducationFrom,
+    'iEducationDetails'  => $iEducationDetails,
+
     'aMessages' => $aMessages,
     'aLayouts'  => $aLayouts,
     'sLayout'   => $sLayout,
@@ -213,23 +245,25 @@ $sType = isset($_REQUEST['type'])?($_REQUEST['type']):"";
 class alternativeWords
 {
   var $sAltWordsFile = 'altwords.dat';
+  var $sAltWordsFileJSON = 'altwords.json';
+  
   var $aAltWords = array();
   function __construct()
   {
     $aAltWords = array();
-    include($this->sAltWordsFile);
+    #include($this->sAltWordsFile);
 
-    $sWords = file_get_contents($this->sAltWordsFile);
+    $sWords = file_get_contents($this->sAltWordsFileJSON);
+    $this->aAltWords = json_decode($sWords, true);
 
-    $this->aAltWords = unserialize($sWords);
-    $this->aAltWords = $aAltWords;
+    $this->save();
   }
 
   function save()
   {
-    //file_put_contents($this->sAltWordsFile, serialize($this->aAltWords));
-    $sStr = "<?php\n \$aAltWords = ".var_export($this->aAltWords, true).";\n";
-    file_put_contents($this->sAltWordsFile, $sStr);
+    file_put_contents($this->sAltWordsFileJSON, json_encode($this->aAltWords,JSON_PRETTY_PRINT));
+    #$sStr = "<?php\n \$aAltWords = ".var_export($this->aAltWords, true).";\n";
+    #file_put_contents($this->sAltWordsFile, $sStr);
   }
 
   function getAltWords($sWord)
@@ -245,40 +279,54 @@ class alternativeWords
 
   function fetchNewWords($sWord)
   {
+    $sWord = trim($sWord);
+    echo "fetchNewWords($sWord)";
     if(substr_count($sWord, " ") == 0){
       try {
-        $sThes = file_get_contents('http://words.bighugelabs.com/api/2/1c14925fc13e4b05b0af1072ce7b53c0/'.urlencode($sWord).'/php');
-        if($sThes === false){
+        $sThesaurus = file_get_contents('http://words.bighugelabs.com/api/2/1c14925fc13e4b05b0af1072ce7b53c0/'.urlencode($sWord).'/php');
+        if($sThesaurus === false){
+          $this->aAltWords[$sWord][] = $sWord;
+          $this->save();
           $aMessages[] = array(
             'type'  => 'warning',
             //'caption' => "From Job =" .var_export(array_keys($aMatches), TRUE)
             'caption' => "Can't find word '".$sWord."'"
           );
-
+          
         } else {
 
-          //echo "\n<br><pre>\nsThes  =" .$sThes ."</pre>";
-          $aThes = unserialize($sThes);
-          //echo "\n<br><pre>\naThes  =" .var_export($aThes , TRUE)."</pre>";
+          //echo "\n<br><pre>\nsThesaurus  =" .$sThesaurus ."</pre>";
+          $aThesaurus = unserialize($sThesaurus);
+          //echo "\n<br><pre>\naThesaurus  =" .var_export($aThesaurus , TRUE)."</pre>";
 
-          if (isset($aThes['verb']['syn']))
+          if (isset($aThesaurus['verb']['syn']))
           {
-            $this->aAltWords[$sWord] = $aThes['verb']['syn'];
+            $this->aAltWords[$sWord] = $aThesaurus['verb']['syn'];
           }
           else
           {
-              $this->aAltWords[$sWord] = $aThes['noun']['syn'];
+              $this->aAltWords[$sWord] = $aThesaurus['noun']['syn'];
           }
           $this->aAltWords[$sWord][] = $sWord;
           $this->save();
         }
       } catch (Exception $e) {
-        $aMessages[] = array(
+          $this->aAltWords[$sWord][] = $sWord;
+          $this->save();
+          $aMessages[] = array(
             'type'  => 'Error',
             //'caption' => "From Job =" .var_export(array_keys($aMatches), TRUE)
             'caption' => "Can't find word '".$sWord."'"
           );
       }
+    } else {
+      $this->aAltWords[$sWord][] = $sWord;
+      $this->save();
+      $aMessages[] = array(
+        'type'  => 'Warning',
+        //'caption' => "From Job =" .var_export(array_keys($aMatches), TRUE)
+        'caption' => "Added phrase '".$sWord."'"
+      );
     }
   }
 }

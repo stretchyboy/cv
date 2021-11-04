@@ -67,7 +67,7 @@
 							<tr>
 								<td colspan="3">
 									<ul>
-										<xsl:for-each select="item[contains(@catergories,$cat)]">
+										<xsl:for-each select="item[contains(@categories,$cat)]">
 											<li>
 												<xsl:value-of select="."/>
 											</li>

@@ -6,6 +6,8 @@
 		encoding="UTF-8"
 		indent="yes"/>
 
+	<xsl:key name="groupByQual" match="cv/educationitem/qualification" use="concat(../organisation, ./@type) "/>
+
 	<xsl:template match="a">
       <xsl:copy>
         <xsl:copy-of select="@*"/>
@@ -73,7 +75,7 @@
 				<section>
 					<h2>Profile</h2>
 			        <div class="item">
-						<xsl:for-each select="cv/profile/item[contains($catergories,category)]/description">
+						<xsl:for-each select="cv/profile/item[contains($categories,category)]/description">
 							<xsl:apply-templates/>
 							<xsl:text> </xsl:text>
 				        </xsl:for-each>
@@ -144,10 +146,10 @@
 								</xsl:if>
 							</xsl:if>
 							<xsl:if test="date[@year &gt;=$details]">
-								<xsl:if test="item[contains($catergories,category)]/description">
+								<xsl:if test="item[contains($categories,category)]/description">
 									<div class="items">
 										<ul>
-											<xsl:for-each select="item[contains($catergories,category)]/description">
+											<xsl:for-each select="item[contains($categories,category)]/description">
 												<li>
 													<xsl:apply-templates/>
 												</li>
@@ -169,7 +171,7 @@
 
 				<section>
 					<h2>Education / Qualifications</h2>
-					<xsl:for-each select="cv/educationitem/qualification[@level &gt; 1]/..">
+					<xsl:for-each select="cv/educationitem/qualification[not(@level &lt; $educationfrom )]/..">
 						<xsl:sort select="date"/>
 						<div class="item education">
 							<div class="organisationname">
@@ -197,18 +199,29 @@
 									</xsl:if>
 								</xsl:for-each>
 							</div>
-							<div class="items">
-								<ul>
-									<xsl:for-each select="qualification">
-										<li>
-											<xsl:attribute name="class">
-												<xsl:value-of select="@type"/>
-											</xsl:attribute>
-											<xsl:value-of select="@type"/> - <xsl:value-of select="@title"/><xsl:if test="@grade"> (<xsl:value-of select="@grade"/>)</xsl:if>
-										</li>
-									</xsl:for-each>
-								</ul>
-							</div>
+							<!--<xsl:if test="count(qualification) &gt; 1">
+								<div class="summary">
+									<xsl:value-of select="count(qualification)"/> x
+
+									<xsl:value-of select="qualification[1]/@type"/>
+
+								</div>
+							</xsl:if>
+							-->
+							<!-- <xsl:if test="not(count(qualification) &gt; 1 )"> -->
+								<div class="items">
+									<ul>
+										<xsl:for-each select="qualification">
+											<li>
+												<xsl:attribute name="class">
+													<xsl:value-of select="@type"/>
+												</xsl:attribute>
+												<xsl:value-of select="@type"/> - <xsl:value-of select="@title"/><xsl:if test="@grade"> (<xsl:value-of select="@grade"/>)</xsl:if>
+											</li>
+										</xsl:for-each>
+									</ul>
+								</div>
+							<!--</xsl:if>-->
 						</div>
 					</xsl:for-each>
 				</section>

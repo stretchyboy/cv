@@ -15,7 +15,7 @@
     <github>stretchyboy</github>
     <dateofbirth>27th July 1976</dateofbirth>
     <nationality>British</nationality>
-    <maritalstatus>Separated</maritalstatus>
+    <maritalstatus>Divorced</maritalstatus>
   </candidate>
   <profile>
     <item>
@@ -72,7 +72,11 @@
       <description>Good web development skills both aesthetically and technically, with a strong commitment to clean code.</description>
     </item>
     <item>
-      <!--    <description>Flexible, adaptable and self developing with an aptitude for picking up ICT systems and techniques 			 (I am currently learning JAVA for 3D games development and XUL for an Internet aware song lyric and presentation projection suite).</description>-->
+          <category>ICT</category>
+      <description>Flexible, adaptable and self developing with an aptitude for picking up ICT systems and techniques 			 (I am currently learning JAVA for 3D games development and XUL for an Internet aware song lyric and presentation projection suite).</description>
+    </item>
+    <item>
+      <category>programming</category>
       <description>Flexible, adaptable and self developing with an aptitude for picking up programming languages, ICT systems and techniques 			 (I am currently learning A-Frame for web based VR development).</description>
     </item>
     <item>
@@ -80,8 +84,7 @@
       <category>development</category>
       <description>Experience of high profile and high financial turnover environments, writing for systems with an annual turnover in excess of 14 million pounds			and being the mostly responsible for the 'Flora London Marathon Exhibition' website.</description>
     </item>
-
-    <!--<item>
+<item>
       <category>education</category>
       <description>Good training and mentoring skills ranging from identifying learners needs to preparing sessions and giving feedback and assessment.</description>
     </item>
@@ -89,16 +92,14 @@
       <category>education</category>-
       <description>Good classroom and workshop teaching skills and exposure to teacher training at <a href="http://shu.sc.uk">SHU</a> (Withdrew due to accidental injury).</description>
       </item>
-    -->
-    <!--<item>
+<item>
       <category>education</category>
       <category>learning</category>
       <description>Good classroom and workshop teaching skills and exposure to teacher training (CertEd) at <a href="http://shu.sc.uk">Sheffield Hallam University</a> unfortunately I could not complete due to accidental injury.</description>
     </item>
     <item>
       <description>A hardworking individual with good interpersonal, written, verbal and visual communications skills and an aptitude for software development, coaching, learning materials and training.</description>
-    </item>-->
-
+    </item>
 
   </profile>
   <experience type="Paid">
@@ -108,7 +109,7 @@
     <summary>
     </summary>
     <item>
-      <category>Virtual Reality</category>
+      <category>vr</category>
       <category>System Design</category>
       <description>Part of co-design process for a new PlayStation VR, Educational Environmental Narrative game as part of the
         <a href="http://revealvr.eu">REVEAL</a> project with
@@ -131,12 +132,12 @@
     <item>
       <category>programming</category>
       <category>education</category>
-      <description>Teaching requirements capture, design diagraming, agile, UML and extreme programming techniques, OOP etc.</description>
+      <description>Teaching requirements capture, design thinking, design diagramming, agile, UML and extreme programming techniques, OOP etc.</description>
     </item>
     <item>
       <category>security</category>
       <category>education</category>
-      <description>Teaching basic cyber security theory and techinques to students.</description>
+      <description>Teaching cyber security theory and techniques to students for the CyberEPQ qualification.</description>
     </item>
     <item>
       <category>education</category>
@@ -154,7 +155,10 @@
       <category>mentoring</category>
       <category>javascript</category>
       <category>python</category>
-        <description>Teaching version control (git), team working technologies (gitlab, github, issue tracking etc.) and test driven development, using JavaScript, C# and Python languages.</description>
+      <category>tdd</category>
+      <category>C#</category>
+      <category>C++</category>
+      <description>Teaching version control (git), team working technologies (gitlab, github, issue tracking etc.) and test driven development, using JavaScript, C#, C++ and Python languages.</description>
     </item>
     <item>
       <category>python</category>
@@ -167,7 +171,6 @@
       <category>computing</category>
       <category>javascript</category>
       <category>programming</category>
-      <category>blended learning</category>
       <description>Implementing interactive blended learning materials (HTML, JavaScript etc.) and documentation of techniques and software.</description>
     </item>
     <item>
@@ -228,7 +231,7 @@
     </item>
     <item>
       <category>education</category>
-      <description>Developing micro accrediations using <a href="https://openbadges.org/">Open Badges</a> and approaches combining Blooms Taxonomy and the Experience API.</description>
+      <description>Developing micro accreditation scheme using <a href="https://openbadges.org/">Open Badges</a> and approaches combining Blooms Taxonomy and the Experience API.</description>
     </item>
     <item>
       <category>emerging technology</category>
@@ -240,10 +243,10 @@
       <category>handlebars</category>
       <category>html</category>
       <category>javascript</category>
-      <description>Designed the software for <a href="http://junctionarts.org/data-draw/">Data-Draw</a>, a machine for capturing survey data in a tactile and engaging way. It then produces engaging generative animated art works, unique to each visitor from the data. The individual recieves a paper version and can see themselves or the whole day of visitors on-line. The system is written in JavaScript using HTML, SVG, LESS and Handlebars templating, producing a very adaptable system for use by many organisations.</description>
+      <description>Designed the software for <a href="http://junctionarts.org/data-draw/">Data-Draw</a>, a machine for capturing survey data in a tactile and engaging way. It then produces engaging generative animated art works, unique to each visitor from the data. The individual receives a paper version and can see themselves or the whole day of visitors on-line. The system is written in JavaScript using HTML, SVG, LESS and Handlebars templating, producing a very adaptable system for use by many organisations.</description>
     </item>
     <item>
-      <category>virtual reality</category>
+      <category>vr</category>
       <category>emerging technology</category>
       <category>html</category>
       <category>javascript</category>
@@ -273,7 +276,7 @@
       <category>css</category>
       <category>javascript</category>
       <category>education</category>
-      <description>Designed and taught workshops on many different techincal subjects from installing software to developing HTML, CSS, JavaScript, PHP and designing Robots.</description>
+      <description>Designed and taught workshops on many different technical subjects from installing software to developing HTML, CSS, JavaScript, PHP and designing Robots.</description>
     </item>
     <item>
       <category>linux</category>
@@ -333,29 +336,29 @@
     <date year="2003" month="05"></date>
     <date year="2008" month="06"></date>
     <title>Software Developer</title>
-    <summary>Software Developer on TAMS (Total Agency Management System) which provides back office and public websites HTML/CSS for booking accommodation and conference facilities and equipment and exhibition space.</summary>
+    <summary>Software Developer on TAMS (Total Agency Management System) which provides back office and white label public websites for booking accommodation and conference facilities and equipment and exhibition space.</summary>
     <item>
       <category>system design</category>
       <description>Worked closely with internal and external customers identifying, proposing and implementing new features to improve user experience.</description>
     </item>
+    <item>
+      <category>full-stack</category>
+      <category>lamp</category>
+      <category>orm</category>
+      <description>Full-stack development in a multiserver LAMP environment. Developing our in house ORM and presentation components</description>
+    </item>
+    
     <item>
       <category>databases</category>
       <description>Relational Database design and maintenance using PostgreSQL on a system comprising of well over 100 tables.</description>
     </item>
     <item>
       <category>php</category>
-      <description>Developed major 'Hotel Booking Agency Management System' written in heavily object oriented PHP			with an in house frame work that I helped to develop, this included extensions to SMARTY.</description>
+      <description>Developed major 'Hotel Booking Agency Management System' written in object oriented PHP			with an in house frame work that I helped to develop, this included extensions to SMARTY.</description>
     </item>
     <item>
       <category>php</category>
-      <description>Wrote and was responsible for design, maintenance and user support			for a user definable report writing module, which outputed as HTML/CSS, CSV and PDF.</description>
-    </item>
-    <item>
-      <category>javascript</category>
-      <category>html</category>
-      <category>php</category>
-      <category>svg</category>
-      <description>Wrote a cross browser rich Internet application for designing lettering for t-shirts and running vests for the Flora London Marathon, in object oriented JavaScript using JSON as the communication medium, and CSS styling.</description>
+      <description>Wrote and was responsible for design, maintenance and user support for a user definable report writing module, which output as HTML/CSS, CSV and PDF.</description>
     </item>
     <item>
       <category>javascript</category>
@@ -366,13 +369,22 @@
     <item>
       <category>system design</category>
       <category>project lead</category>
-      <description>Project lead on our work for the 'London Marathon Exhibition', developing T-Shirt printing, exhihbition design, sales and promotion web sites.</description>
+      <description>Project lead on our work for the 'London Marathon Exhibition', developing T-Shirt printing, exhibition design, sales and promotional web sites.</description>
     </item>
+        <item>
+      <category>javascript</category>
+      <category>html</category>
+      <category>php</category>
+      <category>svg</category>
+      <description>Wrote a cross browser rich Internet application for designing lettering for t-shirts and running vests for the Flora London Marathon, in object oriented JavaScript using JSON as the communication medium, and CSS styling.</description>
+    </item>
+
     <item>
       <category>php</category>
       <category>svg</category>
       <category>hardware</category>
-      <description>Built SVG plotter driver in PHP for HPGL2 based cutter plotters, used for taking T-Shirt lettering requests and cutting them out of vinyl.</description>
+      <category>hpgl</category>
+      <description>Built web based T-shirt manufacture system including material minimsing batch management and a SVG plotter driver in PHP for HPGL2 based cutter plotters.</description>
     </item>
     <item>
       <category>javascript</category>
@@ -387,15 +399,16 @@
       <category>html</category>
       <category>php</category>
       <category>svg</category>
-      <description>Wrote a user edited content managment system that, allowed Exhibitors at the Flora London Marathon to add there own content and logos to the lmexpo website safely.</description>
+      <description>Wrote a user edited content management system that, allowed Exhibitors at the Flora London Marathon to add there own content and logos to the lmexpo website safely.</description>
     </item>
     <item>
       <category>xml</category>
-      <description>Wrote XML / REST interfaces for connection to partner organisations systems, for single sign-in etc.			And integration with Google Checkout and WorldPay.</description>
+      <description>Wrote XML / REST interfaces for connection to partner organisations systems, for single sign-in etc.	And integration with Google Checkout and WorldPay.</description>
     </item>
     <item>
       <category>php</category>
-      <description>Designed and coded to unit tests for suitable areas of systems, ensuring further robustness.</description>
+      <category>tdd</category>
+      <description>Designed and coded using TDD in internally built library, ensuring further robustness.</description>
     </item>
     <departure>CMJ was wound up after the emigration of our owner.</departure>
   </experience>
@@ -404,7 +417,7 @@
     <date year="2002" month="09"></date>
     <date year="2003" month="04"></date>
     <title>Advice Worker / IT Coordinator</title>
-    <summary>Advised job seekers and developed software that matched thier skills to local jobs &amp; training.</summary>
+    <summary>Advised job seekers and developed software that matched their skills to local jobs &amp; training.</summary>
     <item>
       <category>advising</category>
       <description>Advised and assisted people on job search issues and help them to develop and find work.</description>
@@ -551,11 +564,11 @@
     <organisation>AMT International</organisation>
     <date year="1999" month="08"></date>
     <date year="1999" month="08"></date>
-    <qualification type="City &amp; Guilds" level="2.1" title="7331 in Training Techniques"></qualification>
+    <qualification type="City &amp; Guilds" level="3" title="7331 in Training Techniques"></qualification>
   </educationitem>
   <educationitem>
     <organisation>University of Sheffield</organisation>
-    <date year="1994" month="04"></date>
+    <date year="1994" month="10"></date>
     <date year="1996" month="06"></date>
     <qualification type="BEng" title="Control &amp; Systems Engineering" grade="200 CAT Points" level="4"></qualification>
   </educationitem>
@@ -579,7 +592,18 @@
     <qualification type="GCSE" level="2"  title="British Industrial Society" grade="B"></qualification>
     <qualification type="GCSE" level="2"  title="German" grade="C"></qualification>
   </educationitem>
-  <referee name="Vic Allen" title="Curriculum Director : Creative Digital Media">
+  <referee name="Ifatgar Ahmed" title="Curriculum Director for Computing">
+    <organisation>UTC Sheffield - Olympic Legacy Park</organisation>
+    <address>
+      <line>UTC Olympic Legacy Park</line>
+      <city>Sheffield</city>
+      <postcode>S9 3TU</postcode>
+    </address>
+    <tel>0114 260 3940</tel>
+    <email>iahmed@utcsheffield.org.uk</email>
+  </referee>
+  <!--	
+    <referee name="Vic Allen" title="Curriculum Director : Creative Digital Media">
     <organisation>UTC Sheffield</organisation>
     <address>
       <line>111 Matilda Street</line>
@@ -589,7 +613,7 @@
     <tel>0114 260 3970</tel>
     <email>vallen@utcsheffield.org.uk</email>
   </referee>
-  <!--	<referee name="Brigidin Crowther" title="Disability Service Manager">
+  <referee name="Brigidin Crowther" title="Disability Service Manager">
   <organisation>South Yorkshire Disability Service Team</organisation>
   <address>
     <line>3rd Floor Rockingham Court</line>

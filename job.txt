@@ -1,18 +1,111 @@
-Hack The Box is looking for a creative, dedicated and skilled individual to help us move the platform forward. The right candidate will need to be able to work remotely and on-premise, be adaptable regarding programming languages and paradigms and have skills in managing and coaching your fellow engineers.
-Being the platform that it is, a passion for security is an absolute must for this position. Whether you are a pen-tester or practice security as a hobby, experience in the field is a must.
-We're all hackers at heart, and as such a hacker mentality will enable you to contribute and integrate more efficiently. A slew of certifications or university degrees are not what we're looking for - what we're looking for is passion.
+                                                                                                       
 
-Developing features in HTB platforms and tools
-Reviewing Pull Requests submitted by your fellow junior engineers
-Mentoring junior sw engineers;
-Contribute to architectural and sw design decisions
-Contribute and maintaining technical documentation and specifications
-Maintaining the platform by reacting to issues raised by our users
-A good grasp of the English language is an absolute requirement
-As a part of Hack The Box, you will have the opportunity to help shape the future of the platform, bringing your own flare and skill set to our world-class team.
-Benefits of being part of the team will include:
-Company supplied state-of-the art equipment
-Education and trainings to help you enhance your skills
-Attendance of industry conferences and meetups
-Full access to the Hack The Box lab offerings
-Flexibility in working hours
+
+
+Job Description 
+
+
+
+
+
+
+
+Name of Job Holder:
+
+
+Job Title:
+Software Engineering Specialist
+Job Role:
+
+
+Department:
+Engineering
+OUC:
+SPCE02
+Reports to:
+Domain Manager
+Location:
+Sheffield\Leeds
+
+
+
+
+
+
+KEY PURPOSE OF ROLE
+
+
+As a Software Engineering Specialist you are responsible for the development and support of software applications. You are the lead technical expert within a Domain.  You work collaboratively as a member of a team to show what good is by being an expert engineer. You will be expected to demonstrate best practice in refining requirements, design solutions, write code, tests and deploy applications.  You are a role model for Engineers in the team with a responsibility to set a high bar for quality. As part of this responsibility you will provide regular technical and non-technical coaching. As a technical expert, you continuously evaluate areas of technology, process, standards and policy that can be improved.   You are a knowledge champion and seek every opportunity to share your experience across the department.  You will develop a good understanding of the needs of your customer and may be required to represent your team in meetings with stakeholders, contributing to their strategy and direction. As a technology enthusiast you keep up to date with the latest developments in the IT industry and apply industry best practice to drive continuous improvement and innovation within Plusnet.
+
+
+KEY RESPONSIBILITIES 
+(the core activities, outputs expected of the role, regulatory & legal requirements)
+
+
+
+To be successful in the role of Software Engineering Specialist, the role holder will be expected to;
+
+​Provide expert software engineering advise and coaching within the Domain
+Lead detailed design sessions
+Ensure technical delivery risks are addressed as early as possible within delivery schedules, through technical spikes and proof of technologies
+Inspect and review the work of the team providing governance of engineering principles
+Review and adapt processes and standards and provide recommendations for improvement.
+Continuously improve quality of products.
+Leads in the refinement of requirements and solution architecture to eliminate ambiguity, conflict & duplication.
+Leads the assigned domain at design governance meetings
+Identify opportunities to address waste including addressing technical debt, inefficient development processes and opportunities for automation.
+Contribute to planning, including sizing, prioritisation and capacity plans.
+Set the bar for quality within the Domain, never compromising engineering discipline 
+Share knowledge through documentation, presentations and pairing.
+Personal development and improvement of skill set.
+Keeping up to date with the latest developments in your field.
+Ensure all your work complies with legal, regulatory and policy constraints.
+Provide coaching and mentoring to the team.
+Provide technical training to the department in fields of expertise.
+Contribute to interviews as part of the recruitment process.
+Key contributor to technical estimation when requested by Domain Manager
+
+KEY SKILLS
+Experience in managing conflicting architectural and business ideas and demands to provide clarity to development teams.
+Experience in working in Agile environments to produce detailed and unambiguous design artefacts 
+In depth understanding of end to end software development lifecycles used on large scale agile projects 
+Have considerable experience of reviewing architectural models and design artifacts
+Excellent written and verbal communication skills, communicating and influencing effectively 
+Experience in working with multi-functional engineering teams
+Able to work with little supervision and pick up new or unfamiliar technical concepts quickly
+Good operational experience and commercial awareness
+Able to work independently or as part of a wider detailed design team 
+Addresses technical dept. while meeting project deadlines
+
+TECHNICAL SKILLS
+Expert knowledge with the LAMP stack and or Java
+Hand experience of implementing many design patterns 
+Excellent understanding of numerous application frameworks.
+Thorough understanding of applications servers including JBoss and Messaging
+Expert knowledge of programming concepts including object oriented programming, TDD\BDD, CMS,  virtualization\containerization, API Gateways, ReST and Continuous Delivery.
+Expert knowledge of relational databases including querying and setting up of test data
+Experience with cloud and on premise infrastructure concepts
+In depth knowledge of Atlassian Suite tools (Confluence and Jira) or similar toolset.
+
+DESIRABLE 
+Holds a computer science degree 
+Oracle Certified Professional Java SE Programmer 
+Full stack software development experience
+Expert knowledge of PHP Frameworks (Symfony, Zend)
+A keen advocate of agile best practice including CI\CD, TDD, BDD, Pair Programming and clean code.
+
+Safety. To ensure the health and wellbeing of all of our employees we ask that all our employees read and work in accordance with Plusnet’s  Health and Safety policy     .
+Security. We ask that all of our employees behave in a way which safeguards each employee at Plusnet and BT, Plusnet and BT’s assets, systems and sensitive information. All employees at Plusnet are personally responsible and accountable for the security of their operations and need to fully comply with all security policies relevant with their role. All employees should read and work in accordance with Plusnet’s security policies to protect Plusnet and BT’s assets, systems and sensitive information. 
+Employees should remember that within their role they are authorised to access, use or disclose customer information only when they need to do so to perform their operational duties. Any other access, use, or disclosure may only be made on receipt of additional authority from the information owner. Where employees may be in doubt of what this might mean or cover, they should seek advice from their line manager.
+Ethics and compliance. All employees should read and work to the principles found in ‘The Way We Work’  this will explain to all employees information such as the regulatory, fair trading, competition, data protection and anti-corruption and bribery rules relating to their role at Plusnet.  Where employees may be in doubt of what this might mean or cover, they should seek advice from their line manager.
+Ensure that Plusnet’s code of conduct is fully adhered to under our internal policies,  ‘The Way we Work’ as above and in line with Plusnet values.
+Business Continuity Management. As well as being aware of and understanding the importance of BCM, all employees should review and adhere to the Plusnet Business Continuity plan  which aims to ensure continuity of Plusnet operations where normal service might be disrupted whilst adhering to Plusnet’s Health and Safety policy. 
+
+
+
+
+
+
+
+
+
